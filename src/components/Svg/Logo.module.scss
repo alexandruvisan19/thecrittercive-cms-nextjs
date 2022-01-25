@@ -1,0 +1,16 @@
+.logo g:nth-child(1) {
+  :global {
+    animation-name: fill;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    -webkit-animation-name: fill;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.2s;
+  }
+}

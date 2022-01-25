@@ -1,0 +1,99 @@
+// @import "styles/settings/__settings";
+
+// .categories {
+//   display: grid;
+//   grid-template-columns: repeat(4, 4fr);
+//   gap: 1.5em;
+//   font-size: 1.2em;
+//   list-style: none;
+//   padding-left: 0;
+//   margin: 3rem 0;
+//   position: relative;
+
+//   @media screen and (max-width: 980px) {
+//     grid-template-columns: repeat(2, 4fr);
+//   }
+
+//   @media screen and (max-width: 580px) {
+//     grid-template-columns: repeat(1, 4fr);
+//   }
+
+//   & > li {
+//     div:nth-child(3) {
+//       display: none;
+//     }
+
+//     p {
+//       display: none;
+//     }
+
+//     .count {
+//       position: absolute;
+//       top: -18px;
+//       left: -15px;
+//       display: inline-block;
+//       background-color: #4f9fff;
+//       color: #fff;
+//       z-index: 10;
+//       padding: 10px 15px;
+//       font-size: 1rem;
+//       line-height: 1rem;
+//       font-weight: 700;
+//       box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14);
+//     }
+//     .count::after {
+//       content: " ";
+//       display: block;
+//       position: absolute;
+//       left: -10px;
+//       bottom: -7px;
+//       border-color: transparent #c3c4c6 transparent transparent;
+//       border-style: inset solid inset inset;
+//       border-width: 0 10px 7px;
+//       filter: brightness(50%);
+//     }
+//   }
+
+//   img {
+//     position: absolute;
+//     top: 35%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     opacity: 75%;
+//   }
+
+//   a {
+//     color: inherit;
+//     text-decoration: none;
+//     display: block;
+//     text-align: center;
+//     position: relative;
+//     width: 100%;
+//     font-size: 1.3rem;
+//     padding: 22px;
+//     background-color: #4f9fff;
+//     top: 69%;
+
+//     @media (hover: hover) {
+//       &:hover {
+//         color: #000;
+//       }
+//     }
+//   }
+
+//   .card {
+//     position: relative;
+//     display: inline-block;
+//     border-radius: 6px;
+//     align-items: stretch;
+//     flex: 0 0 31%;
+//     align-items: center;
+//     margin-bottom: 40px;
+//     transition: box-shadow 0.4s ease, transform 0.4s ease, background-image 0.3s ease-in-out;
+
+//     &:hover {
+//       box-shadow: 0 2px 20px 8px rgba(0, 0, 0, 0.1);
+//       transform: translateY(-2px);
+//     }
+//   }
+// }

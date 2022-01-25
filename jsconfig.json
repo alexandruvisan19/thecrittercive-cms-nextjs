@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./src",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "paths": {
+      "public/*": ["../public/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

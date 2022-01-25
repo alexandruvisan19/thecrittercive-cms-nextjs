@@ -1,0 +1,46 @@
+@import "styles/settings/__settings";
+
+.archiveDescription {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #61626a;
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-columns: 1fr;
+  list-style: none;
+  margin: -1rem 0;
+
+  @media screen and (max-width: 980px) {
+    padding-left: 0;
+  }
+
+  figure:first-child {
+    margin: 0 0 0.4rem 0;
+  }
+
+  & > li {
+    display: flex;
+    flex-direction: inherit;
+
+    div {
+      display: block;
+    }
+  }
+
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0;
+
+    & > li {
+      grid-column: 1/7 !important;
+    }
+  }
+}

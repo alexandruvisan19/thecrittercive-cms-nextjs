@@ -1,0 +1,758 @@
+@import "styles/settings/__settings";
+@import "styles/settings/_typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
+    "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",
+    "century gothic", cantarell, oxygen, ubuntu, sans-serif;
+}
+
+@keyframes fill {
+  to {
+    fill: #fcb33f;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-gray-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-gray-800;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// STYLE.CSS
+/*! style.css v1.0.0 | ISC License | https://github.com/ungoldman/style.css */
+html {
+  color: #2c2b27;
+  background-color: white;
+  box-sizing: border-box;
+  font-size: calc(14px + 0.25vw);
+  line-height: 1.55;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern", "liga" 1, "calt" 0;
+  font-feature-settings: "kern", "liga" 1, "calt" 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+  font-family: $font-family-paragraphs;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+small {
+  font-size: 80%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headers;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 1.25rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #777;
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 2.45rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.15em;
+  color: #575757;
+}
+
+p {
+  letter-spacing: -0.01rem;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  color: #0074d9;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  outline: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol {
+  padding: 0;
+  padding-left: 2em;
+}
+
+ul ol,
+ol ol {
+  list-style-type: lower-roman;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+li > p {
+  margin-top: 1em;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+  color: #7d7d7d;
+  border-left: 4px solid #d6d6d6;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: 600;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: menlo, inconsolata, consolas, "fira mono", "noto mono", "droid sans mono", "liberation mono",
+    "dejavu sans mono", "ubuntu mono", monaco, "courier new", monospace;
+  font-size: 90%;
+}
+
+pre,
+code {
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  padding: 1em;
+  line-height: 1.45;
+}
+
+pre code {
+  background: transparent;
+  display: inline;
+  padding: 0;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
+pre code::before,
+pre code::after {
+  content: normal;
+}
+
+pre > code {
+  border: 0;
+  font-size: 1em;
+  white-space: pre;
+  word-break: normal;
+}
+
+code {
+  padding: 0.2em 0;
+  margin: 0;
+}
+
+code::before,
+code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+kbd {
+  background-color: #e6e6e6;
+  background-image: linear-gradient(#fafafa, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 #d6d6d6;
+  color: #303030;
+  display: inline-block;
+  line-height: 0.95em;
+  margin: 0 1px;
+  padding: 5px 5px 1px;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  background: transparent;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  background-color: $border-gray-050;
+  border: 0 none;
+}
+
+hr::before {
+  display: table;
+  content: "";
+}
+
+hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+img {
+  border-style: none;
+  border: 0;
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+figure img {
+  background: white;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  font-weight: 200;
+  margin: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+dfn {
+  font-style: italic;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  padding: 0;
+  margin-top: 1em;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+dl dd {
+  padding: 0 1em;
+  margin-bottom: 1.25em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+input {
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+/* HAMBURGER MENU */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 23px;
+  right: 24px;
+  top: 24px;
+
+  @media screen and (max-width: 980px) {
+    top: 20px;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #2c2b27;
+  height: 13% !important;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #de8800;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  right: 26px !important;
+  top: 17px !important;
+  width: 32px !important;
+  height: 32px !important;
+
+  span {
+    top: 8px !important;
+    right: 0 !important;
+  }
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #2c2b27;
+  height: 3px !important;
+  width: 32px !important;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: $color-main-background;
+  padding: 3.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: unset !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #ffe2b4;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+p {
+  line-height: 1.6;
+  margin: 1.2em 0;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+a {
+  color: $color-primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  &[type="text"],
+  &[type="search"],
+  &[type="email"] {
+    outline-offset: 0;
+    padding: 0.4em 0.6em;
+  }
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.5em 0 0.75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+iframe {
+  width: 100%;
+}
+
+.sr-only {
+  display: block;
+  // overflow: hidden;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 0;
+  height: 0;
+}
