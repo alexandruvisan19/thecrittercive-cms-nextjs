@@ -151,23 +151,10 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
 `;
 
 export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
-  query PostsByCategoryId($categoryId: Int!) {
-    posts(first: 100, where: { categoryId: $categoryId, hasPassword: false }) {
+  query PostByAuthorSlug($slug: String!) {
+    posts(where: { authorName: $slug, hasPassword: false }) {
       edges {
         node {
-          author {
-            node {
-              avatar {
-                height
-                url
-                width
-              }
-              id
-              name
-              slug
-            }
-          }
-          id
           categories {
             edges {
               node {
@@ -190,10 +177,11 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
               srcSet
             }
           }
+          id
           modified
           databaseId
-          title
           slug
+          title
           isSticky
         }
       }

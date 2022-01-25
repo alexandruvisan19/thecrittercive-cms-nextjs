@@ -8,7 +8,7 @@ import Title from 'components/Title';
 
 export default function Author({ user, posts }) {
   const { title, name, avatar, description, slug } = user;
-
+  console.log(user);
   const { metadata } = usePageMetadata({
     metadata: {
       ...user,
