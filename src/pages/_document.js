@@ -33,11 +33,7 @@ export default class MyDocument extends Document {
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>
           {this.helmetHeadComponents}
-          <meta name="theme-color" content="#ffa416" />
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=Inter&family=Spartan:wght@800&display=swap"
-            rel="stylesheet"
-          /> */}
+          <meta name="theme-color" content="#4eb72f" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

@@ -159,13 +159,12 @@
       border-bottom: 4px solid $color-button-border-amazon;
       background-color: $color-button-amazon;
       border-radius: 7px;
-      padding: 5px 5px;
+      padding: 8px 50px;
       display: inline-block;
 
       a {
         text-decoration: none;
         font-weight: 600;
-        padding: 10px 14px;
         letter-spacing: 0.6px;
         color: $color-gray-50;
       }
@@ -180,7 +179,7 @@
       font-size: 1rem;
 
       @media screen and (max-width: 980px) {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
     }
 
@@ -207,6 +206,10 @@
       line-height: 1rem;
       font-weight: 700;
       box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14);
+
+      @media screen and (max-width: 980px) {
+        font-size: 1.3rem;
+      }
 
       &::after {
         content: " ";

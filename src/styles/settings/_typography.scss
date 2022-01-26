@@ -1,24 +1,8 @@
-// @font-face {
-//   font-family: "Inter-Regular";
-//   src: url("../../../public/fonts/Inter-Regular.woff") format("woff"),
-//     url("../../../public/fonts/Inter-Regular.woff2") format("woff2");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Spartan-Bold";
-//   src: url("../../../public/fonts/Spartan-Bold.woff") format("woff"),
-//     url("../../../public/fonts/Spartan-Bold.woff2") format("woff2");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
 $font-family-headers: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
   "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",
   "century gothic", cantarell, oxygen, ubuntu, sans-serif;
-$font-family-paragraphs: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
-  "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",
+$font-family-paragraphs: "helvetica neue", helvetica, -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+  "segoe ui", "fira sans", roboto, noto, "droid sans", "liberation sans", "lucida grande", "franklin gothic medium",
   "century gothic", cantarell, oxygen, ubuntu, sans-serif;
 $font-family-default: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
   "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",

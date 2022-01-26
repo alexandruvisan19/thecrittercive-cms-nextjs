@@ -190,6 +190,11 @@ const Nav = ({ procentScroll }) => {
     <>
       {size.width <= 980 && (
         <Menu itemListElement="div" className={styles.burgerMenu} disableAutoFocus right>
+          <Link href="/">
+            <a aria-label="Logo">
+              <Logo />
+            </a>
+          </Link>
           <div
             className={searchVisibility === SEARCH_HIDDEN ? `${styles.navSearchHidden}` : `${styles.navSearchVisible}`}
           >
