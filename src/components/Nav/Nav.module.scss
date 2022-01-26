@@ -24,7 +24,7 @@
 
 .progressMainStyle {
   height: 4px;
-  background: linear-gradient(120deg, #d5f5cc 0%, #66d047 90%);
+  background: linear-gradient(120deg, #a4e293 0%, #66d047 90%);
   transition: all 0.33s ease-out;
 }
 
@@ -128,7 +128,7 @@
   input {
     font-size: 0.845em;
     outline: none;
-    border: 2px solid $color-gray-100;
+    border: 2px solid $color-primary;
     border-radius: 8px;
   }
 
@@ -238,12 +238,24 @@
       margin-right: 0;
     }
 
+    a {
+      color: white;
+      transition-duration: 0.2s;
+      background-color: $color-primary-light3;
+      border-radius: 5px;
+      letter-spacing: 0.5px;
+      width: fit-content;
+      padding: 0 6px;
+
+      @media screen and (max-width: 980px) {
+        margin: 3px 0;
+        font-size: 1.3rem;
+      }
+    }
+
     &:hover {
       & > a {
-        color: white;
-        transition-duration: 0.8s;
-        background-color: $color-primary;
-        border-radius: 5px;
+        color: $color-secondary-light2;
       }
 
       > .navSubMenu {
@@ -268,7 +280,7 @@
     display: block;
     text-decoration: none;
     color: $color-black-800;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.02rem 0.3em;
 
     @media screen and (max-width: 980px) {
