@@ -100,7 +100,7 @@ h4,
 h5,
 h6 {
   font-family: $font-family-headers;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2em;
   margin-bottom: 1.25rem;
   margin-top: 2rem;
@@ -579,7 +579,7 @@ template {
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   right: 26px !important;
-  top: 17px !important;
+  top: 12px !important;
   width: 32px !important;
   height: 32px !important;
 
@@ -608,7 +608,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: $color-main-background;
-  padding: 3.5em 1.5em 0;
+  padding: 2em 1.5em 0;
   font-size: 1.15em;
   overflow: unset !important;
 }
@@ -690,55 +690,6 @@ table th {
   font-size: 0.85em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
-  }
-
-  table caption {
-    font-size: 1.3em;
-  }
-
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: 0.625em;
-  }
-
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: 0.8em;
-    text-align: right;
-  }
-
-  table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
-  }
 }
 
 iframe {

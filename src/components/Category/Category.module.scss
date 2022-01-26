@@ -6,9 +6,9 @@
   gap: 1.5em;
   font-size: 1.2em;
   list-style: none;
-  padding-left: 0;
   margin: 3rem 0;
   position: relative;
+  padding: 0 1em;
 
   @media screen and (max-width: 980px) {
     grid-template-columns: repeat(2, 4fr);
@@ -56,6 +56,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 95%;
+    width: 200px;
+    height: 200px;
   }
 
   span {
@@ -84,6 +86,10 @@
     align-items: center;
     transition: box-shadow 0.2s ease, transform 0.2s ease, background-image 0.1s ease-in-out;
     height: 320px;
+
+    @media screen and (max-width: 980px) {
+      margin: 0 0 1.5em 0;
+    }
 
     &:hover {
       box-shadow: 0 2px 20px 8px rgba(0, 0, 0, 0.1);
