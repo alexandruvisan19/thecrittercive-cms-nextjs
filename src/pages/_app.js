@@ -53,9 +53,6 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
           `,
         }}
       />
-      <style>
-        @import url({'https://fonts.googleapis.com/css2?family=Inter&family=Spartan:wght@800&display=swap'});
-      </style>
       <SiteContext.Provider value={site}>
         <SearchProvider>
           <NextNProgress height={5} color={variables.progressbarColor} />
