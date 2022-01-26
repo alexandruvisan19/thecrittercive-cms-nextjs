@@ -9,9 +9,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
-    "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",
-    "century gothic", cantarell, oxygen, ubuntu, sans-serif;
+  font-family: $font-family-paragraphs, -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui",
+    "fira sans", roboto, noto, "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica,
+    "franklin gothic medium", "century gothic", cantarell, oxygen, ubuntu, sans-serif;
 }
 
 @keyframes fill {
