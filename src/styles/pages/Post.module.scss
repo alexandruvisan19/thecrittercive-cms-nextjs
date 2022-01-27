@@ -52,6 +52,7 @@
   .anchor {
     float: left;
     margin-left: -42px;
+    text-decoration: none !important;
   }
 
   .anchor:before {
@@ -123,12 +124,13 @@
 
     @media screen and (max-width: 600px) {
       flex-wrap: wrap-reverse;
+      justify-content: center;
     }
 
     [class~="wp-block-media-text__media"] {
       order: 1;
       flex-grow: 1;
-      padding: 0 5% 0% 0%;
+      padding: 0 0 0 5%;
 
       @media screen and (max-width: 980px) {
         text-align: center;
