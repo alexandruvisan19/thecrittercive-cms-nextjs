@@ -176,6 +176,26 @@
       }
     }
 
+    [class~="product-button-chewy"] {
+      border-bottom: 4px solid $color-button-border-chewy;
+      background-color: $color-button-chewy;
+      border-radius: 7px;
+      padding: 8px 50px;
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        color: $color-gray-50;
+      }
+
+      &:hover {
+        border-bottom: none;
+        border-top: 4px solid $color-button-chewy;
+      }
+    }
+
     [class~="wp-block-button__link"] {
       font-size: 1rem;
 

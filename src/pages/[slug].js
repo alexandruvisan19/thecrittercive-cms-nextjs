@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
-import { useEffect } from 'react';
-import AOS from 'aos';
+// import { useEffect } from 'react';
+// import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { unified } from 'unified';
 import rehypeParse from 'rehype-parse';
@@ -73,13 +73,14 @@ export default function Post({ post, socialImage, relatedPosts }) {
     .processSync(post.content)
     .toString();
 
-  useEffect(() => {
-    AOS.init({
-      easing: 'ease-out-cubic',
-      once: false,
-      offset: 250,
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     easing: 'ease-out-cubic',
+  //     once: false,
+  //     offset: 250,
+  //   });
+  // }, []);
+
   const [state] = useScrollIndicator();
   const {
     title,
