@@ -65,6 +65,9 @@ export default function Post({ post, socialImage, relatedPosts }) {
           } else if (node.tagName === 'img' && node.properties.src.includes('amazon')) {
             node.properties.alt = 'amazon product';
             node.properties.loading = 'lazy';
+          } else if (node.tagName === 'img' && node.properties.src.includes('chewy')) {
+            node.properties.alt = 'chewy product';
+            node.properties.loading = 'lazy';
           }
         });
       };

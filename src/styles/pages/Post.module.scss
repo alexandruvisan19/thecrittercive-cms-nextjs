@@ -38,11 +38,12 @@
   }
 
   a {
-    color: $color-secondary-dark1;
+    color: $color-primary;
     transition-duration: 0.2s;
+    text-decoration: underline;
 
     &:hover {
-      color: $color-secondary-light2;
+      color: $color-primary-light1;
       text-decoration: none;
     }
   }
@@ -167,7 +168,7 @@
         text-decoration: none;
         font-weight: 600;
         letter-spacing: 0.6px;
-        color: $color-gray-50;
+        color: $color-black-900;
       }
 
       &:hover {
@@ -187,7 +188,7 @@
         text-decoration: none;
         font-weight: 600;
         letter-spacing: 0.6px;
-        color: $color-gray-50;
+        color: $color-black-900;
       }
 
       &:hover {
@@ -219,7 +220,7 @@
       left: -10px;
       display: inline-block;
       background-color: $color-secondary-dark1;
-      color: $color-gray-50;
+      color: #fff;
       z-index: 1;
       padding: 10px 15px;
       letter-spacing: 0.5px;

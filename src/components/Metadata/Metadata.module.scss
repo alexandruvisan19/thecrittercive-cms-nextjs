@@ -66,15 +66,15 @@
   }
 
   a {
-    color: $border-gray-050;
+    color: $color-black-900;
     font-size: 0.75rem;
-    background-color: $color-secondary-dark1;
+    background-color: #4eb72f6e;
     font-weight: 600;
-    padding: 5px 8px;
+    padding: 5px;
     margin-right: 8px;
     text-decoration: none !important;
-    border-radius: 4px;
-    // border: 1px solid $border-gray-050;
+    // border-radius: 4px;
+    border: 1px solid $color-black-900;
     letter-spacing: 0.4px;
 
     &:hover {
