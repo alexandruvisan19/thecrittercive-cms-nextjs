@@ -1,34 +1,20 @@
 @import "styles/settings/__settings";
 
-/* Top Post Page */
-.articleStructure {
-  margin-bottom: 3rem;
+.contentContainerDesk {
+  display: flex;
+  align-items: flex-start;
+  max-width: 70rem;
+  margin: 0 auto;
+}
 
-  @media screen and (max-width: 980px) {
-    font-size: 1.2rem;
-  }
+.contentContainerMob {
+  max-width: 60rem;
+  margin: 0 auto;
+}
 
-  .tableOfContent {
-    font-family: $font-family-headers;
-    font-size: 1.8rem;
-    font-weight: bold;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $border-gray-050;
-  }
-
-  ul {
-    border-left: 5px solid $color-primary;
-    list-style: none;
-    padding-left: 0.85rem;
-  }
-
-  ul li {
-    padding: 0.25rem;
-
-    @media screen and (max-width: 980px) {
-      padding: 0.5rem;
-    }
-  }
+.stickybox {
+  margin: 0 0 2rem 2rem;
+  flex-basis: 25%;
 }
 
 /* Middle Post Page */

@@ -3,12 +3,15 @@ import { Helmet } from 'react-helmet';
 
 // import { useEffect } from 'react';
 // import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
+import React from 'react';
+import StickyBox from 'react-sticky-box';
 import { unified } from 'unified';
 import rehypeParse from 'rehype-parse';
 import rehypeStringify from 'rehype-stringify';
-import { visit } from 'unist-util-visit';
 import parameterize from 'parameterize';
+import { visit } from 'unist-util-visit';
+import { useWindowSize } from '../hooks/use-window-size';
 
 import { getPostBySlug, getAllPosts, getRelatedPosts, sanitizeExcerpt } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
@@ -19,12 +22,12 @@ import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import { useScrollIndicator } from 'hooks/react-use-scroll-indicator.ts';
 
-import Layout from 'components/Layout';
 // import Header from 'components/Header';
+// import ContainerPost from 'components/ContainerPost';
+import Layout from 'components/Layout';
 import HeaderPost from 'components/HeaderPost';
 import Section from 'components/Section';
 import Container from 'components/Container';
-// import ContainerPost from 'components/ContainerPost';
 import RelatedPostCard from 'components/RelatedPostCard';
 import Content from 'components/Content';
 import Metadata from 'components/Metadata';
@@ -32,9 +35,19 @@ import Author from 'components/Author';
 import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
+import TableOfContents from '../components/TableOfContents';
 
 export default function Post({ post, socialImage, relatedPosts }) {
+  // useEffect(() => {
+  //   AOS.init({
+  //     easing: 'ease-out-cubic',
+  //     once: false,
+  //     offset: 250,
+  //   });
+  // }, []);
+  const size = useWindowSize();
   const toc = [];
+
   const content = unified()
     .use(rehypeParse, {
       fragment: true,
@@ -62,12 +75,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
                 'aria-hidden': 'true',
               },
             });
-          } else if (node.tagName === 'img' && node.properties.src.includes('amazon')) {
-            node.properties.alt = 'amazon product';
-            node.properties.loading = 'lazy';
-          } else if (node.tagName === 'img' && node.properties.src.includes('chewy')) {
-            node.properties.alt = 'chewy product';
-            node.properties.loading = 'lazy';
           }
         });
       };
@@ -75,14 +82,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
     .use(rehypeStringify)
     .processSync(post.content)
     .toString();
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     easing: 'ease-out-cubic',
-  //     once: false,
-  //     offset: 250,
-  //   });
-  // }, []);
 
   const [state] = useScrollIndicator();
   const {
@@ -172,30 +171,41 @@ export default function Post({ post, socialImage, relatedPosts }) {
         </div>
       </HeaderPost>
 
-      <Content>
-        <Section>
-          <Container>
-            <div className={styles.articleStructure}>
-              <p className={styles.tableOfContent}>Inside this article 📑</p>
-              <ul>
-                {toc.map(({ id, title }) => {
-                  return (
-                    <li key={id}>
-                      <a href={`#${id}`}>{title}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <div
-              className={styles.content}
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
-          </Container>
-        </Section>
-      </Content>
+      {size.width > 980 ? (
+        <div className={styles.contentContainerDesk}>
+          <StickyBox className={styles.stickybox} offsetTop={65} offsetBottom={65}>
+            <TableOfContents post={post} platform="desktop" />
+          </StickyBox>
+          <Content>
+            <Section>
+              <Container>
+                <div
+                  className={styles.content}
+                  dangerouslySetInnerHTML={{
+                    __html: content,
+                  }}
+                />
+              </Container>
+            </Section>
+          </Content>
+        </div>
+      ) : (
+        <div>
+          <Content>
+            <TableOfContents post={post} platform="mobile" />
+            <Section>
+              <Container>
+                <div
+                  className={styles.content}
+                  dangerouslySetInnerHTML={{
+                    __html: content,
+                  }}
+                />
+              </Container>
+            </Section>
+          </Content>
+        </div>
+      )}
 
       <Section className={styles.postFooter}>
         <Container>
