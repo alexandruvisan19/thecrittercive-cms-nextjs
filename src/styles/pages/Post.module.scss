@@ -13,8 +13,12 @@
 }
 
 .stickybox {
-  margin: 0 0 2rem 2rem;
+  margin: 0;
   flex-basis: 25%;
+
+  @media screen and (max-width: 1280px) {
+    padding: 0 0 1rem 1rem;
+  }
 }
 
 /* Middle Post Page */
@@ -89,7 +93,7 @@
     margin: 45px 0 40px 0;
     display: flex;
     border: 1px solid $border-gray-050;
-    padding: 25px 25px 20px 25px !important;
+    padding: 25px 20px 25px 20px !important;
     border-radius: 10px;
     position: relative;
     box-shadow: $box-shadow-small;
@@ -109,6 +113,7 @@
     }
 
     @media screen and (max-width: 600px) {
+      margin: 35px 0 40px 0;
       flex-wrap: wrap-reverse;
       justify-content: center;
     }
@@ -117,9 +122,12 @@
       order: 1;
       flex-grow: 1;
       padding: 0 0 0 5%;
+      max-width: 350px;
 
       @media screen and (max-width: 980px) {
         text-align: center;
+        max-width: 300px;
+        padding: 0;
       }
     }
 

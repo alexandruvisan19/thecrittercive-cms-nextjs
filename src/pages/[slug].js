@@ -75,6 +75,16 @@ export default function Post({ post, socialImage, relatedPosts }) {
                 'aria-hidden': 'true',
               },
             });
+          } else if (node.tagName === 'img' && node.properties.src.includes('amazon')) {
+            node.properties.loading = 'lazy';
+            node.properties.alt = 'amazon product';
+            node.properties.width = 350;
+            node.properties.height = 'auto';
+          } else if (node.tagName === 'img' && node.properties.src.includes('chewy')) {
+            node.properties.loading = 'lazy';
+            node.properties.alt = 'chewy product';
+            node.properties.width = 350;
+            node.properties.height = 'auto';
           }
         });
       };

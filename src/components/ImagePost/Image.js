@@ -28,11 +28,20 @@ const ImagePost = ({
             alt={altText || ''}
             srcSet={srcSet}
             sizes={sizes}
-            priority={true}
+            priority="true"
             loading="eager"
           />
         ) : (
-          <Image width={width} height={height} src={src} alt={altText || ''} srcSet={srcSet} sizes={sizes} />
+          <Image
+            width={width}
+            height={height}
+            src={src}
+            alt={altText || ''}
+            srcSet={srcSet}
+            sizes={sizes}
+            priority="true"
+            loading="eager"
+          />
         )}
       </div>
       {children && <figcaption>{children}</figcaption>}

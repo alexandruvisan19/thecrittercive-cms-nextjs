@@ -1,8 +1,13 @@
 @import "styles/settings/__settings";
 
 .content {
-  max-width: 40rem;
+  max-width: 45rem;
   margin: 0 auto;
+  padding: 0 2rem;
+
+  @media screen and (max-width: 980px) {
+    padding: 0;
+  }
 
   h2,
   h3,
