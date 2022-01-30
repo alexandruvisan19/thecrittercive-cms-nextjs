@@ -79,12 +79,12 @@ export default function Post({ post, socialImage, relatedPosts }) {
             node.properties.loading = 'lazy';
             node.properties.alt = 'amazon product';
             node.properties.width = 350;
-            node.properties.height = 'auto';
+            node.properties.height = '100%';
           } else if (node.tagName === 'img' && node.properties.src.includes('chewy')) {
             node.properties.loading = 'lazy';
             node.properties.alt = 'chewy product';
             node.properties.width = 350;
-            node.properties.height = 'auto';
+            node.properties.height = '100%';
           }
         });
       };
