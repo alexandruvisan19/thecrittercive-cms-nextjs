@@ -112,7 +112,6 @@ export const QUERY_PAGE_SEO_BY_URI = gql`
         opengraphPublisher
         opengraphTitle
         opengraphType
-        readingTime
         title
         twitterDescription
         twitterTitle

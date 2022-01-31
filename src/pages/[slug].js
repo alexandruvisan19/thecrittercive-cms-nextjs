@@ -94,18 +94,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
     .toString();
 
   const [state] = useScrollIndicator();
-  const {
-    title,
-    metaTitle,
-    description,
-    date,
-    author,
-    categories,
-    modified,
-    featuredImage,
-    isSticky = false,
-    excerpt,
-  } = post;
+  const { title, metaTitle, description, date, author, categories, modified, featuredImage, excerpt } = post;
 
   const { metadata: siteMetadata = {}, homepage } = useSite();
 
@@ -161,7 +150,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
             author={author}
             categories={categories}
             options={metadataOptions}
-            isSticky={isSticky}
           />
           <h1
             className={styles.title}

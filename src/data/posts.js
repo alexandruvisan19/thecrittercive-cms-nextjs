@@ -96,34 +96,11 @@ export const QUERY_POST_BY_SLUG = gql`
 
 export const QUERY_POSTS_BY_CATEGORY_ID = gql`
   query PostsByCategoryId($categoryId: Int!) {
-    posts(first: 100, where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(first: 100, where: { categoryId: $categoryId }) {
       edges {
         node {
-          author {
-            node {
-              avatar {
-                height
-                url
-                width
-              }
-              id
-              name
-              slug
-            }
-          }
           id
-          categories {
-            edges {
-              node {
-                databaseId
-                id
-                name
-                slug
-              }
-            }
-          }
           date
-          excerpt
           featuredImage {
             node {
               altText
@@ -134,7 +111,6 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
               srcSet
             }
           }
-          modified
           databaseId
           title
           slug
@@ -146,21 +122,10 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
 
 export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
   query PostByAuthorSlug($slug: String!) {
-    posts(where: { authorName: $slug, hasPassword: false }) {
+    posts(where: { authorName: $slug }) {
       edges {
         node {
-          categories {
-            edges {
-              node {
-                databaseId
-                id
-                name
-                slug
-              }
-            }
-          }
           date
-          excerpt
           featuredImage {
             node {
               altText
@@ -172,11 +137,9 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
             }
           }
           id
-          modified
           databaseId
           slug
           title
-          isSticky
         }
       }
     }
@@ -199,7 +162,6 @@ export const QUERY_POST_SEO_BY_SLUG = gql`
         opengraphPublisher
         opengraphTitle
         opengraphType
-        readingTime
         title
         twitterDescription
         twitterTitle
