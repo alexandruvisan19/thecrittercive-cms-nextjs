@@ -38,7 +38,7 @@ import dynamic from 'next/dynamic';
 const RelatedPostCard = dynamic(() => import('components/RelatedPostCard'));
 
 import styles from 'styles/pages/Post.module.scss';
-import TableOfContents from '../components/TableOfContents';
+// import TableOfContents from '../components/TableOfContents';
 
 export default function Post({ post, socialImage, relatedPosts }) {
   // useEffect(() => {
@@ -175,7 +175,18 @@ export default function Post({ post, socialImage, relatedPosts }) {
       {size.width > 980 ? (
         <div className={styles.contentContainerDesk}>
           <StickyBox className={styles.stickybox} offsetTop={65} offsetBottom={65}>
-            <TableOfContents post={post} platform="desktop" />
+            <div className={styles.articleStructure}>
+              <p className={styles.tableOfContent}>Inside this article 📑</p>
+              <ul>
+                {toc.map(({ id, title }) => {
+                  return (
+                    <li key={id}>
+                      <a href={`#${id}`}>{title}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </StickyBox>
           <Content>
             <Section>
@@ -193,7 +204,18 @@ export default function Post({ post, socialImage, relatedPosts }) {
       ) : (
         <div>
           <Content>
-            <TableOfContents post={post} platform="mobile" />
+            <div className={styles.articleStructure}>
+              <p className={styles.tableOfContent}>Inside this article 📑</p>
+              <ul>
+                {toc.map(({ id, title }) => {
+                  return (
+                    <li key={id}>
+                      <a href={`#${id}`}>{title}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
             <Section>
               <Container>
                 <div
