@@ -28,11 +28,14 @@ import Layout from 'components/Layout';
 import HeaderPost from 'components/HeaderPost';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import RelatedPostCard from 'components/RelatedPostCard';
+// import RelatedPostCard from 'components/RelatedPostCard';
 import Content from 'components/Content';
 import Metadata from 'components/Metadata';
 import Author from 'components/Author';
 import FeaturedImage from 'components/FeaturedImage';
+import dynamic from 'next/dynamic';
+
+const RelatedPostCard = dynamic(() => import('components/RelatedPostCard'));
 
 import styles from 'styles/pages/Post.module.scss';
 import TableOfContents from '../components/TableOfContents';
@@ -220,6 +223,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
               ) : (
                 <span>More Posts</span>
               )}
+
               <ul className={styles.posts}>
                 {relatedPostsList.map((post) => {
                   return (

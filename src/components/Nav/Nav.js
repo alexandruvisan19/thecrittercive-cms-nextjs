@@ -189,7 +189,7 @@ const Nav = ({ procentScroll }) => {
   return (
     <>
       {size.width <= 980 && (
-        <Menu itemListElement="div" className={styles.burgerMenu} disableAutoFocus right>
+        <Menu itemListElement="nav" disableAutoFocus right>
           <Link href="/">
             <a aria-label="Logo">
               <Logo />
