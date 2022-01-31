@@ -56,7 +56,6 @@ export async function getPageByUri(uri) {
 
     page.metaTitle = seo.title;
     page.description = seo.metaDesc;
-    page.readingTime = seo.readingTime;
 
     // The SEO plugin by default includes a canonical link, but we don't want to use that
     // because it includes the WordPress host, not the site host. We manage the canonical
