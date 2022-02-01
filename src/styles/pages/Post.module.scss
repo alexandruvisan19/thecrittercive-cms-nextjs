@@ -25,16 +25,16 @@
   ul {
     border-left: 5px solid $color-primary;
     list-style: none;
-    padding-left: 0.85rem;
+    padding-left: 0.55rem;
   }
 
   ul li {
-    font-size: 0.9rem;
-    padding: 0.25rem;
+    font-size: 0.85rem;
+    padding: 0.15rem;
 
     @media screen and (max-width: 980px) {
-      font-size: 1.2rem;
-      padding: 0.5rem;
+      font-size: 1.15rem;
+      padding: 0.35rem;
     }
   }
 }
