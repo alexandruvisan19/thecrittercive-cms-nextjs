@@ -11,7 +11,6 @@ import rehypeParse from 'rehype-parse';
 import rehypeStringify from 'rehype-stringify';
 import parameterize from 'parameterize';
 import { visit } from 'unist-util-visit';
-import { useWindowSize } from '../hooks/use-window-size';
 
 import { getPostBySlug, getAllPosts, getRelatedPosts, sanitizeExcerpt } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
@@ -38,7 +37,6 @@ import dynamic from 'next/dynamic';
 const RelatedPostCard = dynamic(() => import('components/RelatedPostCard'));
 
 import styles from 'styles/pages/Post.module.scss';
-// import TableOfContents from '../components/TableOfContents';
 
 export default function Post({ post, socialImage, relatedPosts }) {
   // useEffect(() => {
@@ -48,7 +46,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
   //     offset: 250,
   //   });
   // }, []);
-  const size = useWindowSize();
   const toc = [];
 
   const content = unified()
@@ -172,63 +169,34 @@ export default function Post({ post, socialImage, relatedPosts }) {
         </div>
       </HeaderPost>
 
-      {size.width > 980 ? (
-        <div className={styles.contentContainerDesk}>
-          <StickyBox className={styles.stickybox} offsetTop={65} offsetBottom={65}>
-            <div className={styles.articleStructure}>
-              <p className={styles.tableOfContent}>Inside this article 📑</p>
-              <ul>
-                {toc.map(({ id, title }) => {
-                  return (
-                    <li key={id}>
-                      <a href={`#${id}`}>{title}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </StickyBox>
-          <Content>
-            <Section>
-              <Container>
-                <div
-                  className={styles.content}
-                  dangerouslySetInnerHTML={{
-                    __html: content,
-                  }}
-                />
-              </Container>
-            </Section>
-          </Content>
-        </div>
-      ) : (
-        <div>
-          <Content>
-            <div className={styles.articleStructure}>
-              <p className={styles.tableOfContent}>Inside this article 📑</p>
-              <ul>
-                {toc.map(({ id, title }) => {
-                  return (
-                    <li key={id}>
-                      <a href={`#${id}`}>{title}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <Section>
-              <Container>
-                <div
-                  className={styles.content}
-                  dangerouslySetInnerHTML={{
-                    __html: content,
-                  }}
-                />
-              </Container>
-            </Section>
-          </Content>
-        </div>
-      )}
+      <div className={styles.contentContainerDesk}>
+        <StickyBox className={styles.stickybox} offsetTop={65} offsetBottom={65}>
+          <div className={styles.articleStructure}>
+            <p className={styles.tableOfContent}>Inside this article 📑</p>
+            <ul>
+              {toc.map(({ id, title }) => {
+                return (
+                  <li key={id}>
+                    <a href={`#${id}`}>{title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </StickyBox>
+        <Content>
+          <Section>
+            <Container>
+              <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{
+                  __html: content,
+                }}
+              />
+            </Container>
+          </Section>
+        </Content>
+      </div>
 
       <Section className={styles.postFooter}>
         <Container>
