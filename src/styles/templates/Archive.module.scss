@@ -33,6 +33,9 @@
   & > li {
     // display: flex;
     // flex-direction: inherit;
+    @media screen and (min-width: 980px) {
+      display: flex;
+    }
 
     div {
       display: block;
