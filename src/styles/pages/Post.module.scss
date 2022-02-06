@@ -3,22 +3,19 @@
 
 /* Top Post Page */
 .articleStructure {
-  margin-bottom: 1.5rem;
-
-  @media screen and (max-width: 980px) {
-    padding: 0 1em;
-    max-width: 45rem;
-    margin: 0 auto;
-  }
+  // @media screen and (max-width: 980px) {
+  //   margin: 0 auto;
+  // }
 
   .tableOfContent {
     font-family: $font-family-headers;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
     padding-bottom: 5px;
     border-bottom: 1px solid $border-gray-050;
-
     @media screen and (max-width: 980px) {
+      margin-top: 0.3em;
+      margin-bottom: 0.5em;
       font-size: 1.8rem;
     }
   }
@@ -41,17 +38,6 @@
   }
 }
 
-.contentContainerDesk {
-  display: flex;
-  align-items: flex-start;
-  max-width: 70rem;
-  margin: 0 auto;
-
-  @media screen and (max-width: 980px) {
-    display: block;
-  }
-}
-
 .contentContainerMob {
   max-width: 60rem;
   margin: 0 auto;
@@ -59,8 +45,6 @@
 
 .stickybox {
   margin: 0;
-  flex-basis: 25%;
-  padding-left: 1em;
 
   @media screen and (max-width: 980px) {
     display: unset;
@@ -76,8 +60,14 @@
 
 /* Middle Post Page */
 .content {
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  border-radius: 15px;
+  padding: 1em;
   @media screen and (max-width: 980px) {
     font-size: 1.2rem;
+    margin-right: 0;
   }
 
   a {

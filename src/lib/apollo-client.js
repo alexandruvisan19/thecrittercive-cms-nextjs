@@ -25,10 +25,10 @@ export function _createApolloClient() {
       uri: removeLastTrailingSlash(process.env.WORDPRESS_GRAPHQL_ENDPOINT),
     }),
     cache: new InMemoryCache(),
-    defaultOptions: {
-      query: {
-        fetchPolicy: 'no-cache',
-      },
-    },
+    // defaultOptions: {
+    //   query: {
+    //     fetchPolicy: 'no-cache',
+    //   },
+    // },
   });
 }

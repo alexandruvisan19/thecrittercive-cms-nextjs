@@ -1,0 +1,32 @@
+.contentPost {
+  display: flex;
+  align-items: flex-start;
+  max-width: 65em;
+  margin: 0 auto;
+  padding: 2em 1em;
+  flex-direction: row-reverse;
+
+  @media screen and (max-width: 980px) {
+    display: block;
+  }
+
+  aside {
+    background-color: #f5f5ff;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    border-radius: 15px;
+    flex-basis: 100%;
+    position: sticky;
+    top: 66px;
+    padding: 0 1em;
+    margin-left: 1em;
+
+    @media screen and (max-width: 980px) {
+      position: initial;
+      display: block;
+      top: 0;
+      padding: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+    }
+  }
+}

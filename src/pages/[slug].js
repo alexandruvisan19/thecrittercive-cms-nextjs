@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 import React from 'react';
-import StickyBox from 'react-sticky-box';
 import { unified } from 'unified';
 import rehypeParse from 'rehype-parse';
 import rehypeStringify from 'rehype-stringify';
@@ -28,7 +27,8 @@ import HeaderPost from 'components/HeaderPost';
 import Section from 'components/Section';
 import Container from 'components/Container';
 // import RelatedPostCard from 'components/RelatedPostCard';
-import Content from 'components/Content';
+// import Content from 'components/Content';
+import ContentPost from '../components/ContentPost';
 import Metadata from 'components/Metadata';
 import Author from 'components/Author';
 import FeaturedImage from 'components/FeaturedImage';
@@ -169,34 +169,32 @@ export default function Post({ post, socialImage, relatedPosts }) {
         </div>
       </HeaderPost>
 
-      <div className={styles.contentContainerDesk}>
-        <StickyBox className={styles.stickybox} offsetTop={65} offsetBottom={65}>
-          <div className={styles.articleStructure}>
-            <p className={styles.tableOfContent}>Inside this article 📑</p>
-            <ul>
-              {toc.map(({ id, title }) => {
-                return (
-                  <li key={id}>
-                    <a href={`#${id}`}>{title}</a>
-                  </li>
-                );
-              })}
-            </ul>
+      <ContentPost>
+        <aside>
+          <div className={styles.stickybox}>
+            <div className={styles.articleStructure}>
+              <p className={styles.tableOfContent}>Inside this article 📑</p>
+              <ul>
+                {toc.map(({ id, title }) => {
+                  return (
+                    <li key={id}>
+                      <a href={`#${id}`}>{title}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-        </StickyBox>
-        <Content>
-          <Section>
-            <Container>
-              <div
-                className={styles.content}
-                dangerouslySetInnerHTML={{
-                  __html: content,
-                }}
-              />
-            </Container>
-          </Section>
-        </Content>
-      </div>
+        </aside>
+        <Container>
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{
+              __html: content,
+            }}
+          />
+        </Container>
+      </ContentPost>
 
       <Section className={styles.postFooter}>
         <Container>
