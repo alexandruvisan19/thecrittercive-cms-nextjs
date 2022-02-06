@@ -121,6 +121,11 @@
   [class~="wp-block-image"] {
     img {
       height: auto;
+      border-radius: 8px;
+    }
+
+    figure {
+      text-align: center;
     }
 
     // @media screen and (min-width: 980px) {
@@ -255,7 +260,7 @@
 
     [class~="top-pick"] {
       position: absolute;
-      top: -18px;
+      top: -38px;
       left: -10px;
       display: inline-block;
       background-color: $color-secondary-dark1;
