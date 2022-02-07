@@ -136,27 +136,24 @@ export default function Post({ post, socialImage, relatedPosts }) {
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
 
       <HeaderPost>
-        {featuredImage && (
-          <FeaturedImage
-            {...featuredImage}
-            src={featuredImage.sourceUrl}
-            dangerouslySetInnerHTML={featuredImage.caption}
-          />
-        )}
         <div>
-          <Metadata
-            className={styles.postMetadata}
-            date={date}
-            author={author}
-            categories={categories}
-            options={metadataOptions}
-          />
           <h1
             className={styles.title}
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
+          <div className={styles.metadataWrapper}>
+            <Author className={styles.postCardMetadata} author={author} date={date} />
+            <Metadata className={styles.postMetadata} date={date} categories={categories} options={metadataOptions} />
+          </div>
+          {featuredImage && (
+            <FeaturedImage
+              {...featuredImage}
+              src={featuredImage.sourceUrl}
+              dangerouslySetInnerHTML={featuredImage.caption}
+            />
+          )}
           {excerpt && (
             <div
               className={styles.postCardContent}
@@ -165,7 +162,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
               }}
             />
           )}
-          <Author className={styles.postCardMetadata} author={author} />
         </div>
       </HeaderPost>
 

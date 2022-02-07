@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import { categoryPathBySlug } from 'lib/categories';
-import { formatDate } from 'lib/datetime';
 import ClassName from 'models/classname';
 
 import styles from './Metadata.module.scss';
@@ -10,7 +9,7 @@ const DEFAULT_METADATA_OPTIONS = {
   compactCategories: true,
 };
 
-const Metadata = ({ className, date, categories, options = DEFAULT_METADATA_OPTIONS }) => {
+const Metadata = ({ className, categories, options = DEFAULT_METADATA_OPTIONS }) => {
   const metadataClassName = new ClassName(styles.metadata);
 
   metadataClassName.addIf(className, className);
@@ -62,18 +61,6 @@ const Metadata = ({ className, date, categories, options = DEFAULT_METADATA_OPTI
           )}
         </li>
       )}
-      {date && (
-        <li className={styles.metadataDate}>
-          <time pubdate="pubdate" dateTime={date}>
-            {formatDate(date)}
-          </time>
-        </li>
-      )}
-      {/* {isSticky && (
-        <li className={styles.metadataSticky}>
-          <FaMapPin aria-label="Sticky Post" />
-        </li>
-      )} */}
     </ul>
   );
 };

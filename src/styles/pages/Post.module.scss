@@ -9,30 +9,33 @@
 
   .tableOfContent {
     font-family: $font-family-headers;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     padding-bottom: 5px;
     border-bottom: 1px solid $border-gray-050;
     @media screen and (max-width: 980px) {
       margin-top: 0.3em;
       margin-bottom: 0.5em;
-      font-size: 1.8rem;
+      font-size: 1.3rem;
     }
   }
 
   ul {
-    border-left: 5px solid $color-primary;
+    border-left: 3px solid $color-primary;
     list-style: none;
     padding-left: 0.55rem;
     font-weight: 600;
+    @media screen and (max-width: 980px) {
+      margin-bottom: 0;
+    }
   }
 
   ul li {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     padding: 0.2rem;
 
     @media screen and (max-width: 980px) {
-      font-size: 1.15rem;
+      font-size: 1rem;
       padding: 0.35rem;
     }
   }
@@ -58,13 +61,14 @@
   // }
 }
 
+.metadataWrapper {
+  margin: 1.6em 0 1em 0;
+}
+
 /* Middle Post Page */
 .content {
-  margin: 0 auto;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   border-radius: 15px;
-  padding: 1em;
   @media screen and (max-width: 980px) {
     font-size: 1.2rem;
     margin-right: 0;
@@ -84,13 +88,16 @@
   /* Headings 2 */
   .anchor {
     float: left;
-    margin-left: -42px;
+    margin-left: -35px;
     text-decoration: none !important;
   }
 
   .anchor:before {
     content: "#";
-    color: $color-secondary;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    color: $color-primary-light3;
     visibility: hidden;
   }
 
@@ -314,7 +321,7 @@
 
 .postMetadata {
   text-align: center;
-  justify-content: left;
+  justify-content: center;
   align-items: baseline;
 }
 

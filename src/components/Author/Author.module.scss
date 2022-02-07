@@ -3,32 +3,31 @@
 .author {
   a {
     margin-left: 0.2em;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     transform: perspective(1px) translateZ(0);
-    color: $color-secondary-dark2;
+    color: $color-black-800;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -2px;
       left: 0;
       width: 100%;
-      height: 0.15em;
+      height: 0.1em;
       background-color: $color-primary;
-      opacity: 0;
-      transition: opacity 300ms, transform 300ms;
+      transition: opacity 200ms, transform 200ms;
+      opacity: 1;
     }
 
     &:hover::after,
     &:focus::after {
-      opacity: 1;
       transform: translate3d(0, 0.2em, 0);
       transition-duration: 0.4s;
     }
   }
 
   address {
-    font-size: 1rem;
+    font-size: 0.82rem;
     display: flex;
     align-items: center;
     font-style: normal;
@@ -39,10 +38,28 @@
     height: auto;
     border-radius: 50%;
     margin-right: 0.5em;
-    border: 2px solid $color-primary;
+    border: 1px solid $color-primary;
   }
 }
 
 .authorCardContent {
   display: flex;
+  justify-content: center;
+  line-height: normal;
+  margin-top: 13px;
+}
+
+.metadataDate {
+  time {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: $color-gray-850;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+
+    @media screen and (max-width: 980px) {
+      font-size: 0.65rem;
+    }
+  }
 }

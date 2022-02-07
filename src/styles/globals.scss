@@ -13,7 +13,7 @@ html {
   color: #2c2b27;
   background-color: white;
   box-sizing: border-box;
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(16px + 0.25vw);
   line-height: 1.55;
   -webkit-font-kerning: normal;
   font-kerning: normal;
@@ -105,7 +105,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h3 {
