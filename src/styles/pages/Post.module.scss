@@ -8,11 +8,13 @@
   // }
 
   .tableOfContent {
+    text-align: center;
     font-family: $font-family-headers;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $border-gray-050;
+    border-bottom: 1px solid $border-gray-100;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     @media screen and (max-width: 980px) {
       margin-top: 0.3em;
       margin-bottom: 0.5em;
@@ -25,13 +27,14 @@
     list-style: none;
     padding-left: 0.55rem;
     font-weight: 600;
+    margin-bottom: 0.6em;
     @media screen and (max-width: 980px) {
       margin-bottom: 0;
     }
   }
 
   ul li {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: 0.2rem;
 
     @media screen and (max-width: 980px) {
