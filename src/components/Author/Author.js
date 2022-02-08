@@ -31,14 +31,14 @@ const Author = ({ className, author, date }) => {
               <a rel="author">{author.name}</a>
             </Link>
             <span>&nbsp; | &nbsp;</span>
+            {date && (
+              <span className={styles.metadataDate}>
+                <time pubdate="pubdate" dateTime={date}>
+                  {formatDate(date)}
+                </time>
+              </span>
+            )}
           </address>
-        </span>
-      )}
-      {date && (
-        <span className={styles.metadataDate}>
-          <time pubdate="pubdate" dateTime={date}>
-            {formatDate(date)}
-          </time>
         </span>
       )}
     </div>

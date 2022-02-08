@@ -10,15 +10,19 @@
   font-size: 1.2rem;
 
   figure {
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
   }
 
   div p::first-letter {
     float: left;
     font-family: Georgia, serif;
-    font-size: 78px;
+    font-size: 4rem;
     line-height: 60px;
-    padding: 6px 6px 3px 3px;
+    padding: 5px;
+
+    @media screen and (max-width: 980px) {
+      padding: 3px 3px 55px 3px;
+    }
   }
 
   div p {

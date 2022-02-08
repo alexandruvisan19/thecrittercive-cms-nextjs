@@ -78,12 +78,12 @@ export default function Post({ post, socialImage, relatedPosts }) {
           } else if (node.tagName === 'img' && node.properties.src.includes('amazon')) {
             node.properties.loading = 'lazy';
             node.properties.alt = 'amazon product';
-            node.properties.width = 350;
+            node.properties.width = '500';
             node.properties.height = '100%';
           } else if (node.tagName === 'img' && node.properties.src.includes('chewy')) {
             node.properties.loading = 'lazy';
             node.properties.alt = 'chewy product';
-            node.properties.width = 350;
+            node.properties.width = '500';
             node.properties.height = '100%';
           }
         });
@@ -145,7 +145,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
           />
           <div className={styles.metadataWrapper}>
             <Author className={styles.postCardMetadata} author={author} date={date} />
-            <Metadata className={styles.postMetadata} date={date} categories={categories} options={metadataOptions} />
+            <Metadata className={styles.postMetadata} categories={categories} options={metadataOptions} />
           </div>
           {featuredImage && (
             <FeaturedImage

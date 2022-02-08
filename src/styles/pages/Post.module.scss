@@ -81,9 +81,11 @@
     color: $color-primary;
     transition-duration: 0.2s;
     text-decoration: underline;
+    z-index: 2;
+    position: relative;
 
     &:hover {
-      color: $color-primary-light1;
+      color: $color-primary-light2;
       text-decoration: none;
     }
   }
@@ -156,9 +158,10 @@
     position: relative;
     box-shadow: $box-shadow-small;
     align-items: center;
+    justify-content: space-between;
 
     &:hover {
-      // box-shadow: 0 2px 20px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: $box-shadow-medium;
       // transform: scale(1.02);
     }
 
@@ -179,8 +182,8 @@
     [class~="wp-block-media-text__media"] {
       order: 1;
       flex-grow: 1;
-      padding: 0 0 0 5%;
-      max-width: 350px;
+      padding: 0 5%;
+      max-width: 250px;
 
       @media screen and (max-width: 980px) {
         text-align: center;
@@ -270,7 +273,7 @@
 
     [class~="top-pick"] {
       position: absolute;
-      top: -38px;
+      top: -44px;
       left: -10px;
       display: inline-block;
       background-color: $color-secondary-dark1;

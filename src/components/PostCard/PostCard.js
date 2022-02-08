@@ -49,7 +49,6 @@ const PostCard = ({ post, options = {} }) => {
       )}
       <div>
         {/* {isSticky && <FaMapPin aria-label="Sticky Post" />} */}
-        <Metadata className={styles.postCardMetadata} {...metadata} />
         <Link href={postPathBySlug(slug)}>
           <a>
             <h3
@@ -68,6 +67,7 @@ const PostCard = ({ post, options = {} }) => {
             }}
           />
         )}
+        <Metadata className={styles.postCardMetadata} {...metadata} />
         {/* <Author className={styles.postCardMetadata} {...metadata} /> */}
       </div>
     </div>
