@@ -27,13 +27,16 @@
   }
 
   address {
-    font-size: 0.82rem;
+    font-size: 15.5px;
     display: flex;
     align-items: center;
     font-style: normal;
 
-    @media screen and (max-width: 340px) {
-      font-size: 0.65rem;
+    @media screen and (max-width: 420px) {
+      font-size: 14.5px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 13px;
     }
   }
 
