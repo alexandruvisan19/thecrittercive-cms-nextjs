@@ -246,7 +246,7 @@
     a {
       color: #edf0fc;
       transition-delay: 0s;
-      background-color: $color-primary-light2;
+      background-color: #3e5fcd;
       border-bottom: 4px solid $color-primary-dark2;
       border-radius: 5px;
       letter-spacing: 0.5px;
@@ -262,7 +262,7 @@
     &:hover {
       & > a {
         border-bottom: none;
-        border-top: 4px solid $color-primary-light2;
+        border-top: 4px solid #3e5fcd;
         color: #fff;
       }
 

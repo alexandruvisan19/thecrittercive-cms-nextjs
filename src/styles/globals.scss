@@ -164,8 +164,13 @@ a:hover {
 
 ul,
 ol {
+  counter-reset: cupcake;
   padding: 0;
-  padding-left: 2em;
+  list-style: circle;
+
+  li::marker {
+    color: $color-primary;
+  }
 }
 
 ul ol,
@@ -186,6 +191,24 @@ ul ol ol,
 ol ul ol,
 ol ol ol {
   list-style-type: lower-alpha;
+}
+
+ol {
+  margin-top: 1.2em;
+  list-style: none;
+}
+
+ol li {
+  counter-increment: cupcake;
+}
+
+ol li:before {
+  content: counters(cupcake, "") ". ";
+  // font-size: 1.05em;
+  /* Whatever custom styles you want here */
+  color: #3e5fcd;
+  font-weight: bold;
+  font-family: cursive;
 }
 
 li > p {

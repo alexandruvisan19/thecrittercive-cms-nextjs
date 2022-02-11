@@ -6,6 +6,7 @@
     transition-duration: 0.2s;
     transform: perspective(1px) translateZ(0);
     color: $color-black-800;
+    font-size: 16px;
 
     &::after {
       content: "";
@@ -58,7 +59,7 @@
 
 .metadataDate {
   time {
-    font-size: 0.65rem;
+    font-size: 14px;
     font-weight: 500;
     color: $color-gray-850;
     text-transform: uppercase;
@@ -66,10 +67,10 @@
     font-weight: 600;
 
     @media screen and (max-width: 980px) {
-      font-size: 0.65rem;
+      font-size: 12px;
     }
     @media screen and (max-width: 340px) {
-      font-size: 0.55rem;
+      font-size: 11px;
     }
   }
 }
