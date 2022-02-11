@@ -26,7 +26,7 @@ const Author = ({ className, author, date }) => {
                 alt="Author Avatar"
               />
             )}
-            <i>written by</i>{' '}
+            <i>by</i>{' '}
             <Link href={authorPathByName(author.name)}>
               <a rel="author">{author.name}</a>
             </Link>
