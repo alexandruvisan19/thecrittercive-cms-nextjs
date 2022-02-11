@@ -3,6 +3,7 @@
 
 /* Top Post Page */
 .articleStructure {
+  border-left: 3px solid $color-secondary;
   // @media screen and (max-width: 980px) {
   //   margin: 0 auto;
   // }
@@ -12,9 +13,10 @@
     font-family: $font-family-headers;
     font-size: 0.9rem;
     font-weight: bold;
-    border-bottom: 1px solid $border-gray-100;
+    // border-bottom: 1px solid $border-gray-100;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    letter-spacing: 1px;
     @media screen and (max-width: 980px) {
       margin-top: 0.3em;
       margin-bottom: 0.5em;
@@ -23,7 +25,6 @@
   }
 
   ul {
-    border-left: 3px solid $color-primary;
     list-style: none;
     padding-left: 0.55rem;
     font-weight: 600;
@@ -35,11 +36,22 @@
 
   ul li {
     font-size: 0.7rem;
-    padding: 0.2rem;
+    padding: 0.15rem;
+    font-weight: 500;
+    line-height: 22px;
 
     @media screen and (max-width: 980px) {
       font-size: 1rem;
       padding: 0.35rem;
+    }
+
+    a {
+      color: #000;
+      transition-duration: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -73,7 +85,7 @@
   background-color: #fff;
   border-radius: 15px;
   @media screen and (max-width: 980px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-right: 0;
   }
 

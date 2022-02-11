@@ -169,7 +169,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
         <aside>
           <div className={styles.stickybox}>
             <div className={styles.articleStructure}>
-              <p className={styles.tableOfContent}>Inside this article 📑</p>
+              <p className={styles.tableOfContent}>Table of Contents 📑</p>
               <ul>
                 {toc.map(({ id, title }) => {
                   return (

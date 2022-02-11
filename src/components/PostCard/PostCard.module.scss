@@ -9,10 +9,16 @@
   border-color: $color-black-050;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  transition: 0.3s;
+  border-radius: 18px;
 
   &:hover {
-    background-color: #edf0fc;
-    border-radius: 8px;
+    background-color: $color-primary-light3;
+    color: #fff;
+  }
+
+  &:hover h3 {
+    color: #fff;
   }
 
   & > div {
@@ -29,10 +35,10 @@
     text-decoration: none;
     font-weight: 800;
 
-    &:hover {
-      text-decoration: none;
-      color: $color-secondary;
-    }
+    // &:hover {
+    //   text-decoration: none;
+    //   color: $color-secondary;
+    // }
   }
 }
 

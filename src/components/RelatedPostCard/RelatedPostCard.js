@@ -2,8 +2,6 @@ import Link from 'next/link';
 
 import { postPathBySlug } from 'lib/posts';
 
-import Metadata from 'components/Metadata';
-
 import styles from './RelatedPostCard.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
 
@@ -39,7 +37,6 @@ const PostCard = ({ post, options = {} }) => {
         </div>
       )}
       <div>
-        <Metadata className={styles.postCardMetadata} {...metadata} />
         <Link href={postPathBySlug(slug)}>
           <a>
             <h3

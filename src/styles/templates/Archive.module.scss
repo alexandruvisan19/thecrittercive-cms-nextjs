@@ -4,7 +4,7 @@
   text-align: center;
   font-size: 1.3rem;
   font-weight: 300;
-  color: #61626a;
+  color: #edf0fc;
   max-width: 36em;
   margin-left: auto;
   margin-right: auto;
@@ -24,10 +24,10 @@
   }
 
   figure:first-child {
-    margin: 0 0 0.4rem 0;
+    // margin: 0 0 0.4rem 0;
 
     @media screen and (max-width: 980px) {
-      margin: 0 0 1rem 0;
+      // margin: 0 0 1rem 0;
     }
   }
 
