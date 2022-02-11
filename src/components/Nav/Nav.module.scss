@@ -208,12 +208,12 @@
       outline: 2px solid $color-primary;
     }
 
-    @media (hover: hover) {
-      &:hover {
-        color: $color-primary;
-        transition-duration: 0.4s;
-      }
-    }
+    // @media (hover: hover) {
+    //   &:hover {
+    //     color: $color-primary;
+    //     transition-duration: 0.4s;
+    //   }
+    // }
   }
 }
 
@@ -231,7 +231,11 @@
     padding: 6px 0;
     z-index: 1;
 
-    &:first-child {
+    &:nth-child(1) {
+      margin-right: 15px;
+    }
+
+    &:nth-child(2) {
       margin-right: 15px;
     }
 
@@ -241,8 +245,9 @@
 
     a {
       color: #edf0fc;
-      transition-duration: 0.2s;
-      background-color: $color-primary-light3;
+      transition-delay: 0s;
+      background-color: $color-primary-light2;
+      border-bottom: 4px solid $color-primary-dark2;
       border-radius: 5px;
       letter-spacing: 0.5px;
       width: fit-content;
@@ -250,13 +255,15 @@
 
       @media screen and (max-width: 980px) {
         margin: 3px 0;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
     }
 
     &:hover {
       & > a {
-        color: $color-secondary-light2;
+        border-bottom: none;
+        border-top: 4px solid $color-primary-light2;
+        color: #fff;
       }
 
       > .navSubMenu {
@@ -281,19 +288,19 @@
     display: block;
     text-decoration: none;
     color: $color-black-800;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     padding: 0.02rem 0.3em;
 
     @media screen and (max-width: 980px) {
       padding: 0.15em;
     }
 
-    @media (hover: hover) {
-      &:hover {
-        color: $color-primary;
-        transition-duration: 0.4s;
-      }
-    }
+    // @media (hover: hover) {
+    //   &:hover {
+    //     color: $color-primary;
+    //     transition-duration: 0.4s;
+    //   }
+    // }
   }
 
   .navSubMenu {

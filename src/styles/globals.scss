@@ -314,25 +314,25 @@ table {
   overflow: auto;
   word-break: normal;
   word-break: keep-all;
-  border: 3px solid $color-secondary-light2;
+  table-layout: fixed;
+  border-radius: 15px;
 }
 
 table th,
 table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
+  border: none;
+  padding: 0.625em;
+  text-align: center;
+  font-size: 0.85em;
 }
 
-table th {
-  font-weight: bold;
-}
-
-table tr {
-  border-top: 1px solid #ccc;
+table p {
+  margin: 5px;
+  line-height: 1.4;
 }
 
 table tr:nth-child(2n) {
-  background-color: $color-black-050;
+  background-color: #93a4e32e;
 }
 
 hr {
@@ -538,6 +538,7 @@ template {
 [hidden] {
   display: none;
 }
+
 /* HAMBURGER MENU */
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -602,7 +603,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #ffe2b4;
+  fill: $color-primary;
 }
 
 /* Wrapper for item list */
@@ -646,46 +647,13 @@ input {
   }
 }
 
-table {
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-  border-radius: 15px;
-}
-
 table caption {
   font-size: 1.5em;
   margin: 0.5em 0 0.75em;
 }
 
 table thead {
-  background-color: $color-secondary-light2;
-}
-
-table tr {
-  padding: 0.35em;
-  border-top: none;
-}
-
-table th,
-table td {
-  border: none;
-  padding: 0.625em;
-  text-align: center;
-  font-size: 0.85em;
-}
-
-table th {
-  font-size: 0.95em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-table p {
-  margin: 5px;
-  line-height: 1.4;
+  background-color: $color-primary-light1;
 }
 
 iframe {
