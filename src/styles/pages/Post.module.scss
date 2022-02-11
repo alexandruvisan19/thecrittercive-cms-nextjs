@@ -50,7 +50,7 @@
       transition-duration: 0.2s;
 
       &:hover {
-        color: $color-primary;
+        color: $color-secondary;
       }
     }
   }
@@ -145,7 +145,7 @@
   [class~="wp-block-image"] {
     img {
       height: auto;
-      border-radius: 8px;
+      border-radius: 14px;
       box-shadow: $box-shadow-small;
     }
 

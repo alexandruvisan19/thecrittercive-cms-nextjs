@@ -78,6 +78,7 @@ h6 {
   margin-bottom: 1.25rem;
   margin-top: 2rem;
   position: relative;
+  letter-spacing: 0.011rem;
 }
 
 h1 small,
@@ -106,7 +107,6 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 700;
   --cap-image-left: url(https://wordpress.thecrittercove.com/wp-content/themes/carbonate-master/images/left.svg);
   --cap-image-right: url(https://wordpress.thecrittercove.com/wp-content/themes/carbonate-master/images/right.svg);
   display: inline;
@@ -121,26 +121,22 @@ h2 {
 
 h3 {
   font-size: 1.65rem;
-  font-weight: 700;
 }
 
 h4 {
   font-size: 1.45rem;
-  font-weight: 700;
 }
 
 h5 {
   font-size: 1.25rem;
-  font-weight: 700;
 }
 
 h6 {
   font-size: 1.15em;
-  font-weight: 700;
 }
 
 p {
-  letter-spacing: -0.01rem;
+  letter-spacing: 0.011rem;
 }
 
 a {
@@ -166,7 +162,6 @@ ul,
 ol {
   counter-reset: cupcake;
   padding: 0;
-  list-style: circle;
 
   li::marker {
     color: $color-primary;
@@ -338,7 +333,7 @@ table {
   word-break: normal;
   word-break: keep-all;
   table-layout: fixed;
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 table th,

@@ -21,6 +21,10 @@
     color: #fff;
   }
 
+  &:hover img {
+    transform: scale(1.2);
+  }
+
   & > div {
     width: 100%;
   }
