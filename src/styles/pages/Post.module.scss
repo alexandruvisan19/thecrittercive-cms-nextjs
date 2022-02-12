@@ -105,15 +105,15 @@
   /* Headings 2 */
   .anchor {
     float: left;
-    margin-left: -35px;
+    margin-left: -30px;
     text-decoration: none !important;
   }
 
   .anchor:before {
     content: "#";
-    font-size: 0.9em;
+    font-size: 1em;
     position: relative;
-    bottom: -35px;
+    bottom: -4px;
     color: $color-primary-light3;
     visibility: hidden;
   }
