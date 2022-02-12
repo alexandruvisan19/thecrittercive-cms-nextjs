@@ -122,7 +122,10 @@ h2 {
 h2:before {
   content: "";
   display: inline-block;
-  height: 70px;
+  height: 80px;
+  width: 1px;
+  margin-top: -60px;
+  padding-top: 100px;
 }
 
 h3 {

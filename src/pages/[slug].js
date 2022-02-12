@@ -59,7 +59,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
             const id = parameterize(node.children[0].value);
             node.properties.id = id;
             node.properties.class = node.properties.class ? `${node.properties.class} ${styles.header}` : styles.header;
-            node.properties.style = 'padding-top: 80px; margin-top: -60px';
+            // node.properties.style = 'padding-top: 80px; margin-top: -60px';
 
             toc.push({
               id,
