@@ -102,6 +102,10 @@
     }
   }
 
+  [class~="img-border"] {
+    border-radius: 14px;
+  }
+
   /* Headings 2 */
   .anchor {
     float: left;
@@ -124,29 +128,42 @@
   /* End of Headings 2 */
 
   [class~="info-block"] {
-    background-color: $color-secondary-light1;
+    background-color: $color-secondary-light2;
     border-radius: 4px;
     padding: 15px;
-    margin: 2.6rem 0;
-    border-left: 4px solid $color-secondary-light3;
+    margin: 1.9rem 0;
+    border-left: 4px solid $color-secondary-dark2;
+    font-weight: 500;
+    color: #000;
+    box-shadow: $box-shadow-medium;
+
+    &:before {
+      content: "💡";
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+  }
+
+  [class~="further-read"] {
+    background-color: $color-primary-light1;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 1.9rem 0;
+    border-left: 4px solid $color-primary-light3;
     font-weight: 500;
     color: #2c2b27;
     box-shadow: $box-shadow-medium;
-  }
 
-  [id~="ez-toc-container"] {
-    margin: 0.6rem 0;
-
-    ul li {
-      padding: 0.3rem;
+    &:before {
+      content: "🗃️";
+      font-size: 1.2rem;
+      margin-right: 5px;
     }
   }
 
   [class~="wp-block-image"] {
     img {
       height: auto;
-      border-radius: 14px;
-      box-shadow: $box-shadow-small;
     }
 
     figure {
