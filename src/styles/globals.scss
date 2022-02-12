@@ -119,6 +119,12 @@ h2 {
   background-size: calc(100% - 10px) 12px, auto 12px, auto 12px;
 }
 
+h2:before {
+  content: "";
+  display: inline-block;
+  height: 70px;
+}
+
 h3 {
   font-size: 1.65rem;
 }
