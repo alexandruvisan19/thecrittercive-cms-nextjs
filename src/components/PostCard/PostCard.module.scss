@@ -10,11 +10,11 @@
   border-bottom-style: solid;
   border-bottom-width: 1px;
   transition: 0.3s;
-  border-radius: 18px;
 
   &:hover {
     background-color: $color-primary-light3;
     color: #fff;
+    border-radius: 18px;
   }
 
   &:hover h3 {
