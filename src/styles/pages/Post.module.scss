@@ -124,6 +124,10 @@
 
   .header:hover .anchor:before {
     visibility: visible;
+
+    @media screen and (max-width: 980px) {
+      visibility: hidden;
+    }
   }
   /* End of Headings 2 */
 
@@ -225,7 +229,8 @@
 
       @media screen and (max-width: 980px) {
         text-align: center;
-        max-width: 300px;
+        max-width: 180px;
+        margin-bottom: 0;
         padding: 0;
       }
     }
