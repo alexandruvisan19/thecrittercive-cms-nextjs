@@ -201,15 +201,18 @@
 
       @media screen and (max-width: 580px) {
         max-width: 200px;
-        margin: 20px;
       }
 
       &:hover {
         opacity: 0.8;
       }
     }
+    table {
+      border-radius: 14px 14px 0 0;
+    }
     table th p {
       text-align: center !important;
+      color: #000;
     }
     table tr td {
       text-align: center !important;
@@ -222,6 +225,11 @@
       margin: 0;
       background-color: white;
       border-right: 3px solid #eceffa;
+
+      @media screen and (max-width: 580px) {
+        border-right: none;
+        border-top: 3px solid #93a5e3;
+      }
     }
     table tr td:nth-child(2) {
       width: 50%;
@@ -230,6 +238,11 @@
     table tr:nth-child(2n) {
       border-bottom: 3px solid #eceffa;
       border-top: 3px solid #eceffa;
+
+      @media screen and (max-width: 580px) {
+        border-bottom: none;
+        border-top: none;
+      }
     }
     table [class~="product-button"] {
       line-height: 20px;
@@ -296,15 +309,19 @@
 
       table thead tr th:nth-child(2) {
         display: block;
-        font-size: 20px;
+        font-size: 22px;
+      }
+
+      table tr {
+        background-color: #93a4e32e;
       }
 
       table td {
         display: block;
         text-align: left;
         font-size: 16px;
-        border-bottom: 1px dotted #ccc;
-        padding: 1em 0;
+        border-bottom: 1px solid $border-gray-100;
+        padding: 0.5em 0;
       }
 
       table tr td:nth-child(2) {
