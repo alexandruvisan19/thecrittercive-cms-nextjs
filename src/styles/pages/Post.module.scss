@@ -187,6 +187,137 @@
     // }
   }
 
+  [class~="product-table"] {
+    box-shadow: $box-shadow-small;
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary-light1;
+      }
+    }
+    img {
+      max-width: 150px;
+
+      @media screen and (max-width: 580px) {
+        max-width: 200px;
+        margin: 20px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    table th p {
+      text-align: center !important;
+    }
+    table tr td {
+      text-align: center !important;
+    }
+    table td {
+      font-size: 16px;
+    }
+    table tr td:nth-child(1) {
+      padding: 3px;
+      margin: 0;
+      background-color: white;
+      border-right: 3px solid #eceffa;
+    }
+    table tr td:nth-child(2) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    table tr:nth-child(2n) {
+      border-bottom: 3px solid #eceffa;
+      border-top: 3px solid #eceffa;
+    }
+    table [class~="product-button"] {
+      line-height: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      a {
+        white-space: nowrap;
+        overflow: hidden;
+        box-shadow: $box-shadow-medium;
+        background-color: $color-button-amazon;
+        padding: 5px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #000;
+
+        @media screen and (max-width: 580px) {
+          padding: 10px;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background-color: $color-button-border-amazon;
+          box-shadow: $box-shadow-large;
+        }
+      }
+    }
+    table [class~="product-button-chewy"] {
+      line-height: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      a {
+        white-space: nowrap;
+        overflow: hidden;
+        box-shadow: $box-shadow-medium;
+        background-color: $color-button-chewy;
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #fff;
+
+        @media screen and (max-width: 580px) {
+          padding: 10px;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background-color: $color-button-border-chewy;
+          box-shadow: $box-shadow-large;
+        }
+      }
+    }
+
+    @media screen and (max-width: 580px) {
+      table {
+        border: 0;
+      }
+
+      table thead tr th:nth-child(1),
+      table thead tr th:nth-child(3) {
+        display: none;
+      }
+
+      table thead tr th:nth-child(2) {
+        display: block;
+        font-size: 20px;
+      }
+
+      table td {
+        display: block;
+        text-align: left;
+        font-size: 16px;
+        border-bottom: 1px dotted #ccc;
+        padding: 1em 0;
+      }
+
+      table tr td:nth-child(2) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
   [class~="product-box"] {
     margin: 45px 0 40px 0;
     display: flex;
