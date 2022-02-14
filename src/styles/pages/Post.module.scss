@@ -181,7 +181,12 @@
     //   text-align: center;
     // }
   }
-
+  [class~="info-table"] {
+    table {
+      display: table !important;
+      border: 5px solid #eceffa;
+    }
+  }
   [class~="product-table"] {
     box-shadow: $box-shadow-small;
     a {
