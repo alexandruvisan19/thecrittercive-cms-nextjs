@@ -158,6 +158,11 @@
   }
   /* End of Headings 2 */
 
+  [class~="small-image"] {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
   [class~="info-block"] {
     background-color: $color-secondary-light2;
     border-radius: 4px;
