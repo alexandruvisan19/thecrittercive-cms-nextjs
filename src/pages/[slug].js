@@ -150,7 +150,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
             TheCritterCove is reader-supported. When you buy via links on our site, we may earn an affiliate commission
             at no cost to you.{' '}
             <Link href="/page/affiliate-disclaimer-and-review-policy/">
-              <a>Learn more</a>
+              <a>See more here</a>
             </Link>
             .
           </p>
