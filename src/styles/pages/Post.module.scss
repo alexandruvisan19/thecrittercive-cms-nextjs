@@ -166,27 +166,29 @@
   [class~="info-block"] {
     background-color: $color-secondary-light2;
     border-radius: 4px;
-    padding: 6px 15px;
+    padding: 6px 15px 8px;
     margin: 1.9rem 0;
-    border-left: 4px solid $color-secondary-dark2;
-    font-weight: 500;
-    color: #000;
+    border-left: 5px solid $color-secondary-dark2;
+    font-weight: bold;
+    color: #2c2b27;
     box-shadow: $box-shadow-medium;
 
     &:before {
       content: "💡";
-      font-size: 25px;
-      margin-right: 5px;
+      font-size: 30px;
+      margin-right: 6px;
+      position: relative;
+      top: 2px;
     }
   }
 
   [class~="further-read"] {
     background-color: #3e5fcd;
     border-radius: 5px;
-    padding: 6px 15px;
+    padding: 3px 15px 8px;
     font-size: 16px;
     margin: 1.9rem 0;
-    border-left: 4px solid $color-primary-dark3;
+    border-left: 5px solid $color-primary-dark3;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
@@ -194,8 +196,10 @@
 
     &:before {
       content: "🗃️";
-      font-size: 25px;
-      margin-right: 5px;
+      font-size: 30px;
+      margin-right: 6px;
+      position: relative;
+      top: 4px;
     }
 
     a {
@@ -203,6 +207,10 @@
       color: #fff;
       font-size: 18px;
       font-weight: 500;
+
+      &:hover {
+        color: $color-primary-light1;
+      }
     }
   }
   [class~="wp-block-image"] {
