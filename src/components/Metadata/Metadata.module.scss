@@ -53,10 +53,10 @@
   li {
     display: inline-block;
 
-    &:after {
-      // content: ", ";
-      margin-right: 0.4em;
-    }
+    // &:after {
+    //   content: ", ";
+    //   margin-right: 0.4em;
+    // }
 
     &:last-child {
       &:after {
@@ -71,11 +71,11 @@
     background-color: $color-secondary-light1;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 5px 6px;
+    padding: 6px 8px 4px;
     margin-right: 5px;
     text-decoration: none !important;
     border-radius: 4px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.7px;
     box-shadow: $box-shadow-small;
 
     &:hover {

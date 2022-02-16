@@ -18,24 +18,6 @@ const Metadata = ({ className, categories, options = DEFAULT_METADATA_OPTIONS })
 
   return (
     <ul className={metadataClassName.toString()}>
-      {/* {author && (
-        <li className={styles.metadataAuthor}>
-          <address>
-            {author.avatar && (
-              <img
-                width={author.avatar.width}
-                height={author.avatar.height}
-                src={author.avatar.url}
-                alt="Author Avatar"
-              />
-            )}
-            By{' '}
-            <Link href={authorPathByName(author.name)}>
-              <a rel="author">{author.name}</a>
-            </Link>
-          </address>
-        </li>
-      )} */}
       {Array.isArray(categories) && categories[0] && (
         <li className={styles.metadataCategories}>
           {compactCategories && (

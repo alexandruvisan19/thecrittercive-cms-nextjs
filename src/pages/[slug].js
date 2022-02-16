@@ -136,6 +136,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
 
       <HeaderPost>
         <div>
+          <Metadata className={styles.postMetadata} categories={categories} options={metadataOptions} />
           <h1
             className={styles.title}
             dangerouslySetInnerHTML={{
@@ -144,11 +145,14 @@ export default function Post({ post, socialImage, relatedPosts }) {
           />
           <div className={styles.metadataWrapper}>
             <Author className={styles.postCardMetadata} author={author} date={date} />
-            <Metadata className={styles.postMetadata} categories={categories} options={metadataOptions} />
           </div>
           <p id={styles.affiliateDisclosure}>
             TheCritterCove is reader-supported. When you buy via links on our site, we may earn an affiliate commission
-            at no cost to you. <a href="/page/affiliate-disclaimer-and-review-policy/">Learn more</a>.
+            at no cost to you.{' '}
+            <Link href="/page/affiliate-disclaimer-and-review-policy/">
+              <a>Learn more</a>
+            </Link>
+            .
           </p>
           {featuredImage && (
             <FeaturedImage
