@@ -17,39 +17,41 @@ const ImagePost = ({
   const imageClassName = new ClassName(styles.image);
   imageClassName.addIf(className, className);
   return (
-    <figure className={imageClassName.toString()}>
-      <div className={styles.featuredImageImg}>
-        {sticky ? (
-          <Image
-            width={width}
-            height={height}
-            src={src}
-            alt={altText || ''}
-            srcSet={srcSet}
-            loading="eager"
-            layout="intrinsic"
-          />
-        ) : (
-          <Image
-            width={width}
-            height={height}
-            src={src}
-            alt={altText || ''}
-            srcSet={srcSet}
-            layout="intrinsic"
-            loading="eager"
+    <>
+      <figure className={imageClassName.toString()}>
+        <div className={styles.featuredImageImg}>
+          {sticky ? (
+            <Image
+              width={width}
+              height={height}
+              src={src}
+              alt={altText || ''}
+              srcSet={srcSet}
+              loading="eager"
+              layout="intrinsic"
+            />
+          ) : (
+            <Image
+              width={width}
+              height={height}
+              src={src}
+              alt={altText || ''}
+              srcSet={srcSet}
+              layout="intrinsic"
+              loading="eager"
+            />
+          )}
+        </div>
+        {children && <figcaption>{children}</figcaption>}
+        {dangerouslySetInnerHTML && (
+          <figcaption
+            dangerouslySetInnerHTML={{
+              __html: dangerouslySetInnerHTML,
+            }}
           />
         )}
-      </div>
-      {children && <figcaption>{children}</figcaption>}
-      {dangerouslySetInnerHTML && (
-        <figcaption
-          dangerouslySetInnerHTML={{
-            __html: dangerouslySetInnerHTML,
-          }}
-        />
-      )}
-    </figure>
+      </figure>
+    </>
   );
 };
 

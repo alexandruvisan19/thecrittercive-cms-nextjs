@@ -75,6 +75,34 @@
   margin: 1.6em 0 1em 0;
 }
 
+#affiliateDisclosure {
+  font-size: 13px !important;
+  font-weight: 400;
+  color: #646464;
+  text-align: center;
+  margin: 2em auto 0 !important;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-primary-light1;
+    }
+  }
+
+  &::first-letter {
+    float: none;
+    font-family: inherit;
+    font-size: unset;
+    line-height: inherit;
+    padding: 0;
+  }
+}
+
 /* Middle Post Page */
 .content {
   background-color: #fff;

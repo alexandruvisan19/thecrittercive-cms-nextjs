@@ -59,7 +59,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
             const id = parameterize(node.children[0].value);
             node.properties.id = id;
             node.properties.class = node.properties.class ? `${node.properties.class} ${styles.header}` : styles.header;
-            // node.properties.style = 'padding-top: 80px; margin-top: -60px';
 
             toc.push({
               id,
@@ -147,6 +146,10 @@ export default function Post({ post, socialImage, relatedPosts }) {
             <Author className={styles.postCardMetadata} author={author} date={date} />
             <Metadata className={styles.postMetadata} categories={categories} options={metadataOptions} />
           </div>
+          <p id={styles.affiliateDisclosure}>
+            TheCritterCove is reader-supported. When you buy via links on our site, we may earn an affiliate commission
+            at no cost to you. <a href="/page/affiliate-disclaimer-and-review-policy/">Learn more</a>.
+          </p>
           {featuredImage && (
             <FeaturedImage
               {...featuredImage}
