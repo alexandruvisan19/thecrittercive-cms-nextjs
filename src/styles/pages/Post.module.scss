@@ -176,7 +176,7 @@
 
     &:before {
       content: "💡";
-      font-size: 30px;
+      font-size: 25px;
       margin-right: 6px;
       position: relative;
       top: 2px;
@@ -194,6 +194,9 @@
     letter-spacing: 1px;
     color: #fff;
     box-shadow: $box-shadow-medium;
+    @media screen and (max-width: 640px) {
+      padding: 3px 15px 16px;
+    }
 
     &:before {
       content: "🗃️";
@@ -228,6 +231,10 @@
     table {
       display: table !important;
       border: 5px solid #eceffa;
+
+      td {
+        text-align: left !important;
+      }
     }
   }
   [class~="product-table"] {
