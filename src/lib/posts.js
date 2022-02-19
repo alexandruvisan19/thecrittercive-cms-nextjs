@@ -283,7 +283,6 @@ export async function getRelatedPosts(category, postId, count = 3) {
     relatedPosts = sorted.map((post) => ({
       title: post.title,
       slug: post.slug,
-      date: post.date,
       featuredImage: post.featuredImage,
     }));
   }

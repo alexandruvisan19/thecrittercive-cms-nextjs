@@ -215,15 +215,20 @@ export default function Post({ post, socialImage, relatedPosts }) {
                 <span>More Posts</span>
               )}
 
-              <ul className={styles.posts}>
-                {relatedPostsList.map((post) => {
-                  return (
-                    <li key={post.slug}>
-                      <RelatedPostCard post={post} />
-                    </li>
-                  );
-                })}
-              </ul>
+              {relatedPosts.posts.length >= 3 && (
+                <ul className={styles.posts}>
+                  {
+                    (console.log(relatedPosts.posts.length),
+                    relatedPostsList.map((post) => {
+                      return (
+                        <li key={post.slug}>
+                          <RelatedPostCard post={post} />
+                        </li>
+                      );
+                    }))
+                  }
+                </ul>
+              )}
             </div>
           )}
         </Container>

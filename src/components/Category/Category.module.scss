@@ -56,8 +56,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 95%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: auto;
   }
 
   span {
@@ -85,7 +85,7 @@
     flex: 0 0 31%;
     align-items: center;
     transition: box-shadow 0.2s ease, transform 0.2s ease, background-image 0.1s ease-in-out;
-    height: 320px;
+    height: 290px;
 
     @media screen and (max-width: 980px) {
       margin: 0 0 1.5em 0;
