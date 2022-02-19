@@ -1,15 +1,11 @@
 @import "../../styles/settings/colors";
 
 .author {
-  i {
-    font-size: 16px;
-  }
   a {
     margin-left: 0.3em;
     transition-duration: 0.2s;
     transform: perspective(1px) translateZ(0);
     color: $color-black-800;
-    font-size: 16px;
 
     &::after {
       content: "";
@@ -31,17 +27,9 @@
   }
 
   address {
-    font-size: 15.5px;
     display: flex;
     align-items: center;
     font-style: normal;
-
-    @media screen and (max-width: 420px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 360px) {
-      font-size: 14px;
-    }
   }
 
   img {
@@ -54,26 +42,18 @@
 }
 
 .authorCardContent {
+  color: $color-gray-850;
   display: flex;
   justify-content: center;
   line-height: normal;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
   margin-top: 13px;
-}
 
-.metadataDate {
-  time {
-    font-size: 14px;
-    font-weight: 500;
-    color: $color-gray-850;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-
-    @media screen and (max-width: 980px) {
-      font-size: 12px;
-    }
-    @media screen and (max-width: 340px) {
-      font-size: 11px;
-    }
+  @media screen and (max-width: 400px) {
+    font-size: 14.5px;
+    letter-spacing: 0;
   }
 }

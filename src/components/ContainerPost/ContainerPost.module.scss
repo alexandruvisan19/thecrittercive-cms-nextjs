@@ -6,13 +6,17 @@
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2em 1.5em 0 1.5em;
+  padding: 3em 1.5em 0 1.5em;
   font-size: 1.2rem;
 
   div h1 {
     @media screen and (max-width: 780px) {
       margin: -1em;
     }
+  }
+
+  div:nth-child(6) > p {
+    line-height: 1.35;
   }
 
   figure {
@@ -27,14 +31,15 @@
   div p::first-letter {
     float: left;
     font-family: Georgia, serif;
-    font-size: 4rem;
-    line-height: 60px;
-    padding: 5px;
-  }
+    font-size: 4.7em;
+    line-height: 0.86em;
+    padding: 0 8px 0 0;
+    color: $color-secondary-dark2;
 
-  // div {
-  //   margin-bottom: 0.4em;
-  // }
+    @media screen and (max-width: 980px) {
+      line-height: 0.85em;
+    }
+  }
 
   div p {
     font-size: 1.1rem !important;

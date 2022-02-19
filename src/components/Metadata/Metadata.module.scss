@@ -91,19 +91,3 @@
     }
   }
 }
-
-.metadataDate {
-  time {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: $color-gray-850;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 5px 0 0.3px 0;
-    font-weight: 800;
-
-    @media screen and (max-width: 980px) {
-      font-size: 0.75rem;
-    }
-  }
-}
