@@ -20,8 +20,6 @@ import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import { useScrollIndicator } from 'hooks/react-use-scroll-indicator.ts';
 
-// import Header from 'components/Header';
-// import ContainerPost from 'components/ContainerPost';
 import Layout from 'components/Layout';
 import HeaderPost from 'components/HeaderPost';
 import Section from 'components/Section';
@@ -63,16 +61,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
             toc.push({
               id,
               title: node.children[0].value,
-            });
-
-            node.children.unshift({
-              type: 'element',
-              tagName: 'a',
-              properties: {
-                href: `#${id}`,
-                class: styles.anchor,
-                'aria-hidden': 'true',
-              },
             });
           } else if (node.tagName === 'img' && node.properties.src.includes('amazon')) {
             node.properties.loading = 'lazy';
@@ -217,16 +205,13 @@ export default function Post({ post, socialImage, relatedPosts }) {
 
               {relatedPosts.posts.length >= 3 && (
                 <ul className={styles.posts}>
-                  {
-                    (console.log(relatedPosts.posts.length),
-                    relatedPostsList.map((post) => {
-                      return (
-                        <li key={post.slug}>
-                          <RelatedPostCard post={post} />
-                        </li>
-                      );
-                    }))
-                  }
+                  {relatedPostsList.map((post) => {
+                    return (
+                      <li key={post.slug}>
+                        <RelatedPostCard post={post} />
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </div>

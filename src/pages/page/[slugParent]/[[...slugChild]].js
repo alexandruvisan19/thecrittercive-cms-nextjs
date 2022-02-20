@@ -17,7 +17,6 @@ import Breadcrumbs from 'components/Breadcrumbs';
 import styles from 'styles/pages/Page.module.scss';
 
 export default function Page({ page, breadcrumbs }) {
-  // console.log(page);
   const { title, metaTitle, description, slug, content, featuredImage, children } = page;
 
   const { metadata: siteMetadata = {} } = useSite();
