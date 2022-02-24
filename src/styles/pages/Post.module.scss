@@ -4,18 +4,19 @@
 /* Top Post Page */
 .articleStructure {
   border-left: 3px solid $color-secondary;
-  // @media screen and (max-width: 980px) {
-  //   margin: 0 auto;
-  // }
+
+  @media screen and (max-width: 980px) {
+    border-left: none;
+  }
 
   .tableOfContent {
     text-align: center;
     font-family: $font-family-headers;
-    font-size: 0.9rem;
+    font-size: 1em;
     font-weight: bold;
-    // border-bottom: 1px solid $border-gray-100;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    border-bottom: 3px solid $color-secondary;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
     letter-spacing: 1px;
     @media screen and (max-width: 980px) {
       margin-top: 0.3em;
@@ -24,6 +25,7 @@
     }
   }
   ul {
+    font-family: $font-family-headers;
     margin-top: 0 !important;
     list-style: none;
     padding-left: 0.55rem;
@@ -31,16 +33,17 @@
     margin-bottom: 0.6em;
     @media screen and (max-width: 980px) {
       margin-bottom: 0;
+      padding-left: 0;
     }
   }
   ul li {
-    font-size: 0.7rem;
-    padding: 0.25em;
+    font-size: 0.75rem;
+    padding: 0.15em;
     font-weight: 500;
     line-height: 22px;
     @media screen and (max-width: 980px) {
       font-size: 1rem;
-      padding: 0.35rem;
+      padding: 0.25rem;
     }
     a {
       color: #000;
