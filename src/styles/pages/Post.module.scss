@@ -280,6 +280,11 @@
   }
   [class~="product-table"] {
     box-shadow: $box-shadow-small;
+
+    @media screen and (max-width: 980px) {
+      display: table;
+      margin: 0 auto;
+    }
     a {
       text-decoration: none;
 

@@ -34,8 +34,15 @@
     text-decoration: none;
 
     @media screen and (max-width: 980px) {
-      font-size: 1.35rem;
+      font-size: 1.65rem;
       padding: 0 0 0 15px;
+    }
+    @media screen and (max-width: 680px) {
+      font-size: 1.55rem;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 1.15rem;
+      line-height: 21px;
     }
 
     &:hover {
