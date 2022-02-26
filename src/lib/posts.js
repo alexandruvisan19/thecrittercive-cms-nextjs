@@ -273,7 +273,7 @@ export function mapPostData(post = {}) {
  * getRelatedPosts
  */
 
-export async function getRelatedPosts(category, postId, count = 3) {
+export async function getRelatedPosts(category, postId, count = 6) {
   let relatedPosts = [];
 
   if (category) {

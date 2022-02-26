@@ -10,13 +10,18 @@
   border-bottom-style: solid;
   border-bottom-width: 1px;
 
-  // &:hover {
-  //   background-color: #edf0fc;
-  //   border-radius: 8px;
-  // }
+  @media screen and (max-width: 980px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+  }
 
   & > div {
     width: 100%;
+
+    @media screen and (max-width: 980px) {
+      width: 50%;
+    }
   }
 
   a {
@@ -28,6 +33,11 @@
     color: $color-black-800;
     text-decoration: none;
 
+    @media screen and (max-width: 980px) {
+      font-size: 1.35rem;
+      padding: 0 0 0 15px;
+    }
+
     &:hover {
       text-decoration: none;
       color: $color-secondary-light3;
@@ -37,11 +47,6 @@
 
 .postCardSticky {
   display: flex;
-
-  // &:hover {
-  //   background-color: #edf0fc;
-  //   border-radius: 8px;
-  // }
 
   svg {
     position: absolute;
