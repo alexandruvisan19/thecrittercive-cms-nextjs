@@ -269,6 +269,12 @@
       }
     }
   }
+  [class~="green-text"] {
+    color: green;
+  }
+  [class~="red-text"] {
+    color: red;
+  }
   [class~="specific-table"] {
     table {
       display: table;
