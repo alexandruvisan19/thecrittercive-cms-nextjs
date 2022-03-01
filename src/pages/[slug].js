@@ -202,7 +202,6 @@ export default function Post({ post, socialImage, relatedPosts }) {
               ) : (
                 <span>More Posts</span>
               )}
-
               {relatedPosts.posts.length >= 3 && (
                 <ul className={styles.posts}>
                   {relatedPostsList.map((post) => {
