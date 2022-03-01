@@ -265,7 +265,6 @@ export function mapPostData(post = {}) {
   if (data.featuredImage) {
     data.featuredImage = data.featuredImage.node;
   }
-
   return data;
 }
 
