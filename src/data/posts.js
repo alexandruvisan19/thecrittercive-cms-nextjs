@@ -14,14 +14,12 @@ export const POST_FIELDS = gql`
       }
     }
     databaseId
-    date
     isSticky
     postId
     slug
     title
     featuredImage {
       node {
-        caption
         sourceUrl
       }
     }
@@ -173,19 +171,6 @@ export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
       edges {
         node {
           ...PostFields
-          author {
-            node {
-              avatar {
-                height
-                url
-                width
-              }
-              id
-              name
-              slug
-            }
-          }
-          excerpt
         }
       }
     }
@@ -199,31 +184,6 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
       edges {
         node {
           ...PostFields
-          author {
-            node {
-              avatar {
-                height
-                url
-                width
-              }
-              id
-              name
-              slug
-            }
-          }
-          content
-          excerpt
-          featuredImage {
-            node {
-              altText
-              caption
-              id
-              sizes
-              sourceUrl
-              srcSet
-            }
-          }
-          modified
         }
       }
     }
@@ -265,16 +225,6 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
         node {
           ...PostFields
           excerpt
-          featuredImage {
-            node {
-              altText
-              caption
-              id
-              sizes
-              sourceUrl
-              srcSet
-            }
-          }
           modified
         }
       }

@@ -259,13 +259,13 @@ const Nav = ({ procentScroll }) => {
           {size.width > 880 && (
             <ul id="page-wrap" className={styles.navMenu}>
               <li key="cat1">
-                <Link href="/categories/turtle-care/">
-                  <a>Turtle Care</a>
+                <Link href="/categories/turtle/">
+                  <a>Turtle Guides</a>
                 </Link>
               </li>
               <li key="cat2">
-                <Link href="/categories/tortoise-care/">
-                  <a>Tortoise Care</a>
+                <Link href="/categories/tortoise/">
+                  <a>Tortoise Guides</a>
                 </Link>
               </li>
               <li

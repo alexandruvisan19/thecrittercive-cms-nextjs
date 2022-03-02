@@ -20,12 +20,6 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        {/* <h1
-          dangerouslySetInnerHTML={{
-            __html: title,
-          }}
-        /> */}
-
         <h1
           className={styles.description}
           dangerouslySetInnerHTML={{
@@ -64,6 +58,7 @@ export async function getStaticProps() {
   const { posts, pagination } = await getPaginatedPosts({
     queryIncludes: 'archive',
   });
+
   return {
     props: {
       posts,

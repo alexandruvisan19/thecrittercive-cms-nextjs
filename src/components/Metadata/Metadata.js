@@ -24,11 +24,11 @@ const Metadata = ({ className, categories, options = DEFAULT_METADATA_OPTIONS })
               <Link href={categoryPathBySlug(categories[0].slug)}>
                 <a>{categories[0].name}</a>
               </Link>
-              {/* {categories.length > 1 && ' and more'} */}
             </p>
           )}
           {!compactCategories && (
             <ul>
+              {console.log(categories)}
               {categories.map((category) => {
                 return (
                   <li key={category.slug}>

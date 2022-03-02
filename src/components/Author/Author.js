@@ -18,14 +18,6 @@ const Author = ({ className, author, date }) => {
       {author && (
         <span className={styles.author}>
           <address>
-            {/* {author.avatar && (
-              <img
-                width={author.avatar.width}
-                height={author.avatar.height}
-                src={author.avatar.url}
-                alt="Author Avatar"
-              />
-            )} */}
             <span>By</span>{' '}
             <Link href={authorPathByName(author.name)}>
               <a rel="author">{author.name}</a>
