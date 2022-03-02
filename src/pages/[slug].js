@@ -176,6 +176,7 @@ export default function Post({ post, socialImage, related }) {
       <Section className={styles.postFooter}>
         <Container>
           <p className={styles.postModified}>Last updated on {formatDate(modified)}.</p>
+
           {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (
             <div className={styles.relatedPosts}>
               <div className={styles.moreFrom}>

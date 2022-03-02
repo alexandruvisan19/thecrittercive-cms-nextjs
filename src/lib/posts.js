@@ -153,7 +153,6 @@ const postsByAuthorSlugIncludesTypes = {
   archive: QUERY_POSTS_BY_AUTHOR_SLUG_ARCHIVE,
   index: QUERY_POSTS_BY_AUTHOR_SLUG_INDEX,
 };
-
 export async function getPostsByAuthorSlug({ slug, ...options }) {
   const { queryIncludes = 'index' } = options;
 
