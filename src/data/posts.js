@@ -21,7 +21,6 @@ export const POST_FIELDS = gql`
     title
     featuredImage {
       node {
-        altText
         caption
         sourceUrl
       }
@@ -233,7 +232,7 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
 
 export const QUERY_POSTS_BY_AUTHOR_SLUG_INDEX = gql`
   ${POST_FIELDS}
-  query PostByAuthorSlugIndex($slug: String!) {
+  query PostByAuthorSlugIndex($slug: String) {
     posts(where: { authorName: $slug, hasPassword: false }) {
       edges {
         node {
@@ -246,7 +245,7 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG_INDEX = gql`
 
 export const QUERY_POSTS_BY_AUTHOR_SLUG_ARCHIVE = gql`
   ${POST_FIELDS}
-  query PostByAuthorSlugArchive($slug: String!) {
+  query PostByAuthorSlugArchive($slug: String) {
     posts(where: { authorName: $slug, hasPassword: false }) {
       edges {
         node {
@@ -260,7 +259,7 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG_ARCHIVE = gql`
 
 export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
   ${POST_FIELDS}
-  query PostByAuthorSlug($slug: String!) {
+  query PostByAuthorSlug($slug: String) {
     posts(where: { authorName: $slug, hasPassword: false }) {
       edges {
         node {
