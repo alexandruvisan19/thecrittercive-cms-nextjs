@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
-// import { useEffect } from 'react';
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
 import React from 'react';
 import { unified } from 'unified';
 import rehypeParse from 'rehype-parse';
@@ -11,7 +8,7 @@ import rehypeStringify from 'rehype-stringify';
 import parameterize from 'parameterize';
 import { visit } from 'unist-util-visit';
 
-import { getPostBySlug, getAllPosts, getRelatedPosts, sanitizeExcerpt } from 'lib/posts';
+import { getPostBySlug, getAllPosts, getRelatedPosts } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
 import { formatDate } from 'lib/datetime';
 import { ArticleJsonLd } from 'lib/json-ld';
@@ -24,26 +21,15 @@ import Layout from 'components/Layout';
 import HeaderPost from 'components/HeaderPost';
 import Section from 'components/Section';
 import Container from 'components/Container';
-// import RelatedPostCard from 'components/RelatedPostCard';
-// import Content from 'components/Content';
 import ContentPost from '../components/ContentPost';
 import Metadata from 'components/Metadata';
 import Author from 'components/Author';
 import FeaturedImage from 'components/FeaturedImage';
-import dynamic from 'next/dynamic';
-
-const RelatedPostCard = dynamic(() => import('components/RelatedPostCard'));
+import RelatedPostCard from 'components/RelatedPostCard';
 
 import styles from 'styles/pages/Post.module.scss';
 
-export default function Post({ post, socialImage, relatedPosts }) {
-  // useEffect(() => {
-  //   AOS.init({
-  //     easing: 'ease-out-cubic',
-  //     once: false,
-  //     offset: 250,
-  //   });
-  // }, []);
+export default function Post({ post, socialImage, related }) {
   const toc = [];
 
   const content = unified()
@@ -112,7 +98,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
     compactCategories: false,
   };
 
-  const { posts: relatedPostsList, title: relatedPostsTitle } = relatedPosts;
+  const { posts: relatedPostsList, title: relatedPostsTitle } = related || {};
 
   const helmetSettings = helmetSettingsFromMetadata(metadata);
 
@@ -153,7 +139,7 @@ export default function Post({ post, socialImage, relatedPosts }) {
             <div
               className={styles.postCardContent}
               dangerouslySetInnerHTML={{
-                __html: sanitizeExcerpt(excerpt),
+                __html: excerpt,
               }}
             />
           )}
@@ -190,29 +176,26 @@ export default function Post({ post, socialImage, relatedPosts }) {
       <Section className={styles.postFooter}>
         <Container>
           <p className={styles.postModified}>Last updated on {formatDate(modified)}.</p>
-          {!!relatedPostsList.length && (
+          {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (
             <div className={styles.relatedPosts}>
-              {relatedPostsTitle.name ? (
+              <div className={styles.moreFrom}>
                 <span>
                   More from{' '}
                   <Link href={relatedPostsTitle.link}>
                     <a>{relatedPostsTitle.name}</a>
                   </Link>
                 </span>
-              ) : (
-                <span>More Posts</span>
-              )}
-              {relatedPosts.posts.length >= 3 && (
-                <ul className={styles.posts}>
-                  {relatedPostsList.map((post) => {
-                    return (
-                      <li key={post.slug}>
-                        <RelatedPostCard post={post} />
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+              </div>
+
+              <ul className={styles.posts}>
+                {relatedPostsList.map((post) => {
+                  return (
+                    <li key={post.slug}>
+                      <RelatedPostCard post={post} />
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           )}
         </Container>
@@ -227,26 +210,32 @@ export async function getStaticProps({ params = {} } = {}) {
   const socialImage = `${process.env.OG_IMAGE_DIRECTORY}/${params?.slug}.png`;
 
   const { categories, databaseId: postId } = post;
-  const category = categories.length && categories[0];
-  let { name, slug } = category;
+
+  const { category: relatedCategory, posts: relatedPosts } = await getRelatedPosts(categories, postId);
+  const hasRelated = relatedCategory && Array.isArray(relatedPosts) && relatedPosts.length;
+  const related = !hasRelated
+    ? null
+    : {
+        posts: relatedPosts,
+        title: {
+          name: relatedCategory.name || null,
+          link: categoryPathBySlug(relatedCategory.slug),
+        },
+      };
 
   return {
     props: {
       post,
       socialImage,
-      relatedPosts: {
-        posts: await getRelatedPosts(category, postId),
-        title: {
-          name: name || null,
-          link: categoryPathBySlug(slug),
-        },
-      },
+      related,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const { posts } = await getAllPosts();
+  const { posts } = await getAllPosts({
+    queryIncludes: 'index',
+  });
 
   const paths = posts
     .filter(({ slug }) => typeof slug === 'string')

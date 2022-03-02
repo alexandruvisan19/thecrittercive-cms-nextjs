@@ -247,7 +247,6 @@
   }
   [class~="info-table"] {
     table {
-      // display: table !important;
       border: 3px solid #eceffa;
       border-radius: 14px;
       color: $color-primary-dark1;
@@ -255,7 +254,7 @@
       width: fit-content;
 
       @media screen and (max-width: 440px) {
-        display: block;
+        display: table;
         overflow-x: auto;
         width: 100%;
       }
@@ -594,22 +593,59 @@
 
 /* Bottom Post Page */
 .relatedPosts {
-  display: flex;
-  flex-direction: column;
-  span {
-    font-size: 1.2em;
-    margin-bottom: 0.4em;
-  }
   & > ul {
     padding-left: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     list-style: none;
 
+    li {
+      position: relative;
+      top: 0;
+      transition: top ease 0.5s;
+      &:hover {
+        top: -10px;
+      }
+      img {
+        border-radius: 4px;
+      }
+    }
+
+    span {
+      font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe ui", "fira sans", roboto, noto,
+        "droid sans", "liberation sans", "lucida grande", "helvetica neue", helvetica, "franklin gothic medium",
+        "century gothic", cantarell, oxygen, ubuntu, sans-serif;
+      font-weight: 800;
+      line-height: 1.1em;
+      margin-bottom: 1.25rem;
+      margin-top: 2rem;
+      position: relative;
+      letter-spacing: 0.011rem;
+
+      @media screen and (max-width: 980px) {
+        font-size: 28px;
+        line-height: 0.8rem;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 20px;
+        line-height: 0.6rem;
+      }
+    }
+
     @media screen and (max-width: 980px) {
       grid-template-columns: 1fr !important;
+      div:nth-child(2) {
+        padding-left: 1em;
+      }
     }
   }
+}
+
+.moreFrom {
+  font-size: 1.4em;
+  padding: 0 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid $border-gray-050;
 }
 
 .postMetadata {

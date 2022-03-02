@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import useSite from 'hooks/use-site';
-import { postPathBySlug } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
 import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
 
@@ -12,12 +11,11 @@ import NavListItem from 'components/NavListItem';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
-  const { metadata = {}, recentPosts = [], categories = [], menus } = useSite();
+  const { metadata = {}, categories = [], menus } = useSite();
   const { title } = metadata;
 
-  const hasRecentPosts = Array.isArray(recentPosts) && recentPosts.length > 0;
   const hasRecentCategories = Array.isArray(categories) && categories.length > 0;
-  const hasMenu = hasRecentPosts || hasRecentCategories;
+  const hasMenu = hasRecentCategories;
 
   const navigation = findMenuByLocation(menus, [
     process.env.WORDPRESS_MENU_LOCATION_NAVIGATION,
@@ -40,27 +38,6 @@ const Footer = () => {
                   })}
                 </ul>
               </li>
-              {hasRecentPosts && (
-                <li>
-                  <Link href="/posts/">
-                    <a className={styles.footerMenuTitle}>
-                      <strong>Recent Posts</strong>
-                    </a>
-                  </Link>
-                  <ul className={styles.footerMenuItems}>
-                    {recentPosts.map((post) => {
-                      const { id, slug, title } = post;
-                      return (
-                        <li key={id}>
-                          <Link href={postPathBySlug(slug)}>
-                            <a>{title}</a>
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-              )}
               {hasRecentCategories && (
                 <li>
                   <Link href="/categories/">

@@ -68,6 +68,7 @@ App.getInitialProps = async function (appContext) {
 
   const { posts: recentPosts } = await getRecentPosts({
     count: 5,
+    queryIncludes: 'index',
   });
 
   const { categories } = await getCategories({
@@ -78,7 +79,9 @@ App.getInitialProps = async function (appContext) {
 
   const defaultNavigation = createMenuFromPages({
     locations: [MENU_LOCATION_NAVIGATION_DEFAULT],
-    pages: await getTopLevelPages(),
+    pages: await getTopLevelPages({
+      queryIncludes: 'index',
+    }),
   });
 
   menus.push(defaultNavigation);

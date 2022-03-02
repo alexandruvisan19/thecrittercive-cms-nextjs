@@ -3,17 +3,12 @@ import Link from 'next/link';
 import { postPathBySlug } from 'lib/posts';
 
 import styles from './RelatedPostCard.module.scss';
-import FeaturedImage from 'components/FeaturedImage';
+import Image from 'next/image';
 
 const PostCard = ({ post, options = {} }) => {
-  const { title, slug, date, categories, featuredImage } = post;
+  const { title, slug, categories, image } = post;
   const { excludeMetadata = [] } = options;
-
   const metadata = {};
-
-  if (!excludeMetadata.includes('date')) {
-    metadata.date = date;
-  }
 
   if (!excludeMetadata.includes('categories')) {
     metadata.categories = categories;
@@ -23,15 +18,11 @@ const PostCard = ({ post, options = {} }) => {
 
   return (
     <div className={postCardStyle}>
-      {featuredImage && (
+      {image && (
         <div>
           <Link href={postPathBySlug(slug)}>
             <a aria-label={title}>
-              <FeaturedImage
-                {...featuredImage}
-                src={featuredImage.sourceUrl}
-                dangerouslySetInnerHTML={featuredImage.caption}
-              />
+              <Image src={image} alt={title} width={475} height={250} />
             </a>
           </Link>
         </div>
@@ -39,7 +30,7 @@ const PostCard = ({ post, options = {} }) => {
       <div>
         <Link href={postPathBySlug(slug)}>
           <a>
-            <h3
+            <span
               className={styles.postCardTitle}
               dangerouslySetInnerHTML={{
                 __html: title,

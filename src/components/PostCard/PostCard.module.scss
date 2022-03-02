@@ -54,16 +54,11 @@
 
   & > div:last-child {
     flex-basis: 50.5%;
-    // padding-left: 2rem;
   }
 
   div:first-child {
     margin: 0 !important;
   }
-
-  // figure {
-  //   margin: 0 0 1em 0;
-  // }
 }
 
 .postCardTitle {
@@ -73,10 +68,6 @@
   color: $color-black-800;
   line-height: 1.15384615;
   font-weight: 700;
-
-  // @media screen and (max-width: 980px) {
-  //   padding: 0.5em 0 0 0;
-  // }
 }
 
 .postCardContent {

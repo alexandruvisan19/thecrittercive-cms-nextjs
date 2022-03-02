@@ -11,7 +11,6 @@ const DEFAULT_METADATA_OPTIONS = {
 
 const Metadata = ({ className, categories, options = DEFAULT_METADATA_OPTIONS }) => {
   const metadataClassName = new ClassName(styles.metadata);
-
   metadataClassName.addIf(className, className);
 
   const { compactCategories } = options;
