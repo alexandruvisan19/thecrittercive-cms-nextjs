@@ -213,6 +213,7 @@ export async function getStaticProps({ params = {} } = {}) {
   const { categories, databaseId: postId } = post;
 
   const { category: relatedCategory, posts: relatedPosts } = await getRelatedPosts(categories, postId);
+
   const hasRelated = relatedCategory && Array.isArray(relatedPosts) && relatedPosts.length;
   const related = !hasRelated
     ? null

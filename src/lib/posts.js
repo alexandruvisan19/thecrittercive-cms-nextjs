@@ -303,7 +303,7 @@ export function mapPostData(post = {}) {
  * getRelatedPosts
  */
 
-export async function getRelatedPosts(categories, postId, count = 6) {
+export async function getRelatedPosts(categories, postId, count = 9) {
   if (!Array.isArray(categories) || categories.length === 0) return;
 
   let related = {
@@ -327,9 +327,9 @@ export async function getRelatedPosts(categories, postId, count = 6) {
   }
 
   if (Array.isArray(related.posts) && related.posts.length > count) {
-    related.posts = related.posts.slice(0, count);
-    return related;
+    return related.posts.slice(0, count);
   }
+  return related;
 }
 
 /**
