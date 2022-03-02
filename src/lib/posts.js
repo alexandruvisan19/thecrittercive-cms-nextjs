@@ -313,7 +313,7 @@ export async function getRelatedPosts(categories, postId, count = 9) {
   if (related.category) {
     const { posts } = await getPostsByCategoryId({
       categoryId: related.category.databaseId,
-      queryIncludes: 'archive',
+      queryIncludes: 'all',
     });
 
     const filtered = posts.filter(({ postId: id }) => id !== postId);
