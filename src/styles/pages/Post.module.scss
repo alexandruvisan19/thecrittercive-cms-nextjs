@@ -205,7 +205,7 @@
   }
 
   [class~="further-read"] {
-    line-height: 22px;
+    line-height: 24px;
     background-color: #3e5fcd;
     border-radius: 5px;
     padding: 10px 15px 10px;
@@ -219,12 +219,10 @@
     @media screen and (max-width: 640px) {
       position: relative;
       padding: 10px 8px 10px;
-      text-indent: -3.4em;
-      padding-left: 55px;
     }
     &:before {
       content: "🗃️";
-      font-size: 30px;
+      font-size: 25px;
       margin-right: 6px;
       position: relative;
       top: 4px;
