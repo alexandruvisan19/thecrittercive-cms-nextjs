@@ -28,7 +28,6 @@ const Metadata = ({ className, categories, options = DEFAULT_METADATA_OPTIONS })
           )}
           {!compactCategories && (
             <ul>
-              {console.log(categories)}
               {categories.map((category) => {
                 return (
                   <li key={category.slug}>
