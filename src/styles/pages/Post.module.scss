@@ -261,6 +261,9 @@
       }
       td {
         text-align: left !important;
+        @media screen and (max-width: 440px) {
+          text-align: center !important;
+        }
       }
 
       @media screen and (max-width: 980px) {
@@ -285,6 +288,7 @@
   }
   [class~="product-table"] {
     box-shadow: $box-shadow-small;
+    display: block;
 
     @media screen and (max-width: 980px) {
       display: table;
@@ -301,6 +305,8 @@
       max-width: 150px;
 
       @media screen and (max-width: 580px) {
+        display: table;
+        margin: 0 auto;
         max-width: 200px;
       }
       &:hover {
@@ -309,6 +315,7 @@
     }
     table {
       border-radius: 14px 14px 0 0;
+      margin-bottom: 0;
     }
     table th p {
       text-align: center !important;
