@@ -115,6 +115,10 @@
     width: fit-content;
   }
 
+  p {
+    line-height: 1.5 !important;
+  }
+
   a {
     color: $color-primary;
     transition-duration: 0.2s;
@@ -208,8 +212,8 @@
     line-height: 24px;
     background-color: #3e5fcd;
     border-radius: 5px;
-    padding: 10px 15px 10px;
-    font-size: 14px;
+    padding: 8px 15px 10px;
+    font-size: 15px;
     margin: 1.9rem 0;
     border-left: 5px solid $color-primary-dark3;
     font-weight: 600;
@@ -230,7 +234,7 @@
     a {
       letter-spacing: 0px;
       color: #fff;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 500;
       &:hover {
         color: $color-primary-light1;
@@ -670,6 +674,10 @@
 
 .postFooter {
   text-align: center;
+  padding: 0;
+  @media screen and (max-width: 980px) {
+    padding: 0 1em;
+  }
 }
 
 .postModified {
