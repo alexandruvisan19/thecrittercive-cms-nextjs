@@ -37,7 +37,7 @@
     }
   }
   ul li {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     padding: 0.15em;
     font-weight: 500;
     line-height: 22px;
@@ -292,7 +292,8 @@
   }
   [class~="product-table"] {
     box-shadow: $box-shadow-small;
-    display: block;
+    display: table;
+    margin: 1.5em auto;
 
     @media screen and (max-width: 980px) {
       display: table;

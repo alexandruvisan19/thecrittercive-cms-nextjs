@@ -232,13 +232,13 @@ const Nav = ({ procentScroll }) => {
           </div>
           <ul id="page-wrap" className={styles.navMenu}>
             <li key="cat1">
-              <Link href="/categories/turtle-care/">
-                <a>Turtle Care</a>
+              <Link href="/categories/turtle/">
+                <a>Turtles</a>
               </Link>
             </li>
             <li key="cat2">
-              <Link href="/categories/tortoise-care/">
-                <a>Tortoise Care</a>
+              <Link href="/categories/tortoise/">
+                <a>Tortoises</a>
               </Link>
             </li>
             {navigation?.map((listItem) => {
@@ -260,12 +260,12 @@ const Nav = ({ procentScroll }) => {
             <ul id="page-wrap" className={styles.navMenu}>
               <li key="cat1">
                 <Link href="/categories/turtle/">
-                  <a>Turtle Guides</a>
+                  <a>Turtles</a>
                 </Link>
               </li>
               <li key="cat2">
                 <Link href="/categories/tortoise/">
-                  <a>Tortoise Guides</a>
+                  <a>Tortoises</a>
                 </Link>
               </li>
               <li

@@ -147,6 +147,10 @@ export const QUERY_POST_BY_SLUG = gql`
       title
       slug
       isSticky
+      calculator {
+        turtleCalculator
+        fieldGroupName
+      }
     }
   }
 `;
