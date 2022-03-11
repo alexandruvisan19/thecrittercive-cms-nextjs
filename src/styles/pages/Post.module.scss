@@ -273,10 +273,10 @@
   }
   [class~="comparison-table"] {
     table {
-      border: 3px solid #eceffa;
-      border-radius: 14px;
+      border: 2px solid $color-primary-light1;
+      border-radius: 0;
       color: $color-primary-dark1;
-      box-shadow: $box-shadow-small;
+      box-shadow: $box-shadow-medium;
       width: fit-content;
 
       @media screen and (max-width: 440px) {
@@ -287,6 +287,12 @@
       td {
         width: 50%;
         text-align: left !important;
+      }
+
+      th {
+        text-align: left;
+        font-size: 1.1rem;
+        text-decoration: underline;
       }
       @media screen and (max-width: 980px) {
         box-shadow: none;
@@ -422,7 +428,6 @@
           padding: 10px 25px;
           font-size: 18px;
         }
-
         &:hover {
           background-color: $color-button-border-chewy;
           box-shadow: $box-shadow-large;
