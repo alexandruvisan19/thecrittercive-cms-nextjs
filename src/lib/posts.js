@@ -106,11 +106,11 @@ export async function getPostBySlug(slug) {
       noindex: seo.metaRobotsNoindex,
     };
 
-    post.twitter = {
-      description: seo.twitterDescription,
-      image: seo.twitterImage,
-      title: seo.twitterTitle,
-    };
+    // post.twitter = {
+    //   description: seo.twitterDescription,
+    //   image: seo.twitterImage,
+    //   title: seo.twitterTitle,
+    // };
   }
 
   return {
@@ -303,7 +303,7 @@ export function mapPostData(post = {}) {
  * getRelatedPosts
  */
 
-export async function getRelatedPosts(categories, postId, count = 9) {
+export async function getRelatedPosts(categories, postId, count = 10) {
   if (!Array.isArray(categories) || categories.length === 0) return;
 
   let related = {
