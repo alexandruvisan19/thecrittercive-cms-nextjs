@@ -188,7 +188,6 @@ export default function Post({ post, socialImage, related }) {
                   </Link>
                 </span>
               </div>
-
               <ul className={styles.posts}>
                 {relatedPostsList.map((post) => {
                   return (
