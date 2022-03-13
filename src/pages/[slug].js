@@ -164,7 +164,6 @@ export default function Post({ post, socialImage, related }) {
           </div>
         </aside>
         <Container>
-          {/* {post.calculator.turtleCalculator && 'test1'} */}
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{
@@ -173,7 +172,6 @@ export default function Post({ post, socialImage, related }) {
           />
         </Container>
       </ContentPost>
-
       <Section className={styles.postFooter}>
         <Container>
           <p className={styles.postModified}>Last updated on {formatDate(modified)}.</p>
