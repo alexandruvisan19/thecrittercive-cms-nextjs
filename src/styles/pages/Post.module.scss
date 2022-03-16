@@ -110,19 +110,19 @@
     margin-right: 0;
   }
 
-  a[href*="//"]:after
-  {
-    background-image: url(../../../public/icons8-external-link-24.png);
-    background-size: 18px;
-    position: relative;
-    top: 3px;
-    left: 2px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    content: "";
-  }
+  // li>a[href*="//"]:after,p>a[href*="//"]:after
+  // {
+  //   background-image: url(../../../public/icons8-external-link-24.png);
+  //   background-size: 18px;
+  //   position: relative;
+  //   top: 3px;
+  //   left: 2px;
+  //   background-repeat: no-repeat;
+  //   display: inline-block;
+  //   width: 18px;
+  //   height: 18px;
+  //   content: "";
+  // }
 
   img {
     border-radius: 16px;
