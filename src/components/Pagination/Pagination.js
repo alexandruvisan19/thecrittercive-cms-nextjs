@@ -7,7 +7,7 @@ import { GrPrevious as PreviousIcon, GrNext as NextIcon } from 'react-icons/gr';
 import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
-const MAX_NUM_PAGES = 25;
+const MAX_NUM_PAGES = 10;
 
 const { homepage = '' } = config;
 
