@@ -326,8 +326,10 @@ export async function getRelatedPosts(categories, postId, count = 10) {
     related = await getRelatedPosts(categories, postId, count);
   }
 
-  if (Array.isArray(related.posts) && related.posts.length > count) {
-    return related.posts.slice(0, count);
+  if (related) {
+    if (Array.isArray(related.posts) && related.posts.length > count) {
+      return related.posts.slice(0, count);
+    }
   }
   return related;
 }
